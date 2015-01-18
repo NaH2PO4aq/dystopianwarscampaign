@@ -10,6 +10,7 @@ namespace DystopianWarsCampaign.Controllers
     {
         public ActionResult Index()
         {
+            //Comment added.
             return View();
         }
 
