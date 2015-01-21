@@ -188,6 +188,7 @@
     <None Include="Content\Images\ROF.jpg" />
     <None Include="Content\Images\SID.jpg" />
     <None Include="Content\Images\NONE.png" />
+    <None Include="Content\Images\map2.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
