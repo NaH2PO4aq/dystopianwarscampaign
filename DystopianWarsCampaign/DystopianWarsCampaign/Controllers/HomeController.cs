@@ -17,14 +17,14 @@ namespace DystopianWarsCampaign.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "About the Dystopian Wars Campaign website";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Campaign Battleground Locations";
 
             return View();
         }
