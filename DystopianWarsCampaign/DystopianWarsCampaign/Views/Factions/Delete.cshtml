@@ -1,0 +1,64 @@
+﻿@model DystopianWarsCampaign.Models.Faction
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Faction</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Acronym)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Acronym)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FlagURL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FlagURL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomeFleet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeFleet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AwayFleet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwayFleet)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
