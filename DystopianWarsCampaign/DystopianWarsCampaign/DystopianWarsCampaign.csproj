@@ -186,7 +186,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\Admin\FactionsController.cs" />
     <Compile Include="Controllers\Admin\TerritoriesController.cs" />
     <Compile Include="Controllers\Admin\TerritoryBonusController.cs" />
     <Compile Include="Controllers\Admin\TerritoryUpgradesController.cs" />
@@ -207,10 +206,21 @@
     <Compile Include="Migrations\201501221024436_UpdatedFaction.Designer.cs">
       <DependentUpon>201501221024436_UpdatedFaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201502071303146_UpdatedTerritoryBonuswithRPBonus.cs" />
+    <Compile Include="Migrations\201502071303146_UpdatedTerritoryBonuswithRPBonus.Designer.cs">
+      <DependentUpon>201502071303146_UpdatedTerritoryBonuswithRPBonus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502071307130_AddedTerritoryUpgradeConstructor.cs" />
+    <Compile Include="Migrations\201502071307130_AddedTerritoryUpgradeConstructor.Designer.cs">
+      <DependentUpon>201502071307130_AddedTerritoryUpgradeConstructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201502071558598_UpdatedTerritoriesWithReferencesToBonussesAndUpgrades.cs" />
+    <Compile Include="Migrations\201502071558598_UpdatedTerritoriesWithReferencesToBonussesAndUpgrades.Designer.cs">
+      <DependentUpon>201502071558598_UpdatedTerritoriesWithReferencesToBonussesAndUpgrades.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels\AccountViewModels.cs" />
     <Compile Include="Models\CampaignContext.cs" />
-    <Compile Include="Models\CampaignModels\CampaignDbInitializer.cs" />
     <Compile Include="Models\CampaignModels\Faction.cs" />
     <Compile Include="Models\AccountModels\IdentityModels.cs" />
     <Compile Include="Models\AccountModels\ManageViewModels.cs" />
@@ -266,6 +276,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\Map\Map.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\npm.js" />
@@ -348,6 +359,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201501221024436_UpdatedFaction.resx">
       <DependentUpon>201501221024436_UpdatedFaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502071303146_UpdatedTerritoryBonuswithRPBonus.resx">
+      <DependentUpon>201502071303146_UpdatedTerritoryBonuswithRPBonus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502071307130_AddedTerritoryUpgradeConstructor.resx">
+      <DependentUpon>201502071307130_AddedTerritoryUpgradeConstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502071558598_UpdatedTerritoriesWithReferencesToBonussesAndUpgrades.resx">
+      <DependentUpon>201502071558598_UpdatedTerritoriesWithReferencesToBonussesAndUpgrades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -7,9 +7,9 @@ using System.Web;
 
 namespace DystopianWarsCampaign.Models
 {
-    public class CampaignContext : DbContext
+    public class DystopianCampaignContext : DbContext
     {
-        public CampaignContext()
+        public DystopianCampaignContext()
             : base()
         {
 

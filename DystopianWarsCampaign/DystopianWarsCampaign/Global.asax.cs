@@ -19,7 +19,7 @@ namespace DystopianWarsCampaign
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<CampaignContext, Configuration>());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<DystopianCampaignContext, Configuration>());
         }
     }
 }

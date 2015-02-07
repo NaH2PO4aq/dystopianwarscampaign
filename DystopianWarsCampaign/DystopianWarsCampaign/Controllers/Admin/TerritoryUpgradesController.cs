@@ -13,7 +13,7 @@ namespace DystopianWarsCampaign.Controllers.Admin
 {
     public class TerritoryUpgradesController : Controller
     {
-        private CampaignContext db = new CampaignContext();
+        private DystopianCampaignContext db = new DystopianCampaignContext();
 
         // GET: TerritoryUpgrades
         public ActionResult Index()

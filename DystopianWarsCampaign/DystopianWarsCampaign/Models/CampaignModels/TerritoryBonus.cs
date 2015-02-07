@@ -9,8 +9,14 @@ namespace DystopianWarsCampaign.Models.CampaignModels
     public class TerritoryBonus
     {
         [Key]
-        public int Id { get; set; }
+        public int ID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+        public int RPBonus { get; set; }
+
+        public TerritoryBonus()
+        {
+
+        }
     }
 }

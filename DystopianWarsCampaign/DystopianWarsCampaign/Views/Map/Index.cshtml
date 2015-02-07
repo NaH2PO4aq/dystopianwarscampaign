@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "Index";
 }
-<div class="well">
+<div class="well" id="territoryDetails">
     Territory =
 </div>
 
@@ -17,20 +17,20 @@
     <img class="flags" id="TERR06" src="@Url.Content("~/Content/Images/SID.jpg")" style="position: absolute; top: 60px; left: 1135px; width:66px; height:43px;" />
     <img class="flags" id="TERR07" src="@Url.Content("~/Content/Images/PE.jpg")" style="position: absolute; top: 260px; left: 57px; width:66px; height:43px;" />
     <img class="flags" id="TERR08" src="@Url.Content("~/Content/Images/FSA.jpg")" style="position: absolute; top: 220px; left: 270px; width:66px; height:43px;" />
-    <img class="flags" id="TERR09" src="@Url.Content("~/Content/Images/NONE.png")" style="position: absolute; top: 230px; left: 510px; width:66px; height:43px;" />
-    <img class="flags" id="TERR10" src="@Url.Content("~/Content/Images/NONE.png")" style="position: absolute; top: 220px; left: 690px; width:66px; height:43px;" />
+    <img class="flags" id="TERR09" src="@Url.Content("~/Content/Images/FSA.jpg")" style="position: absolute; top: 230px; left: 510px; width:66px; height:43px;" />
+    <img class="flags" id="TERR10" src="@Url.Content("~/Content/Images/SID.jpg")" style="position: absolute; top: 220px; left: 690px; width:66px; height:43px;" />
     <img class="flags" id="TERR11" src="@Url.Content("~/Content/Images/SID.jpg")" style="position: absolute; top: 230px; left: 908px; width:66px; height:43px;" />
     <img class="flags" id="TERR12" src="@Url.Content("~/Content/Images/NONE.png")" style="position: absolute; top: 240px; left: 1135px; width:66px; height:43px;" />
     <img class="flags" id="TERR13" src="@Url.Content("~/Content/Images/PE.jpg")" style="position: absolute; top: 425px; left: 70px; width:66px; height:43px;" />
-    <img class="flags" id="TERR14" src="@Url.Content("~/Content/Images/NONE.png")" style="position: absolute; top: 425px; left: 280px; width:66px; height:43px;" />
-    <img class="flags" id="TERR15" src="@Url.Content("~/Content/Images/NONE.png")" style="position: absolute; top: 405px; left: 497px; width:66px; height:43px;" />
+    <img class="flags" id="TERR14" src="@Url.Content("~/Content/Images/PE.jpg")" style="position: absolute; top: 425px; left: 280px; width:66px; height:43px;" />
+    <img class="flags" id="TERR15" src="@Url.Content("~/Content/Images/ROF.jpg")" style="position: absolute; top: 405px; left: 497px; width:66px; height:43px;" />
     <img class="flags" id="TERR16" src="@Url.Content("~/Content/Images/NONE.png")" style="position: absolute; top: 395px; left: 713px; width:66px; height:43px;" />
     <img class="flags" id="TERR17" src="@Url.Content("~/Content/Images/NONE.png")" style="position: absolute; top: 430px; left: 923px; width:66px; height:43px;" />
     <img class="flags" id="TERR18" src="@Url.Content("~/Content/Images/NONE.png")" style="position: absolute; top: 425px; left: 1135px; width:66px; height:43px;" />
     <img class="flags" id="TERR19" src="@Url.Content("~/Content/Images/PE.jpg")" style="position: absolute; top: 595px; left: 70px; width:66px; height:43px;" />
     <img class="flags" id="TERR20" src="@Url.Content("~/Content/Images/NONE.png")" style="position: absolute; top: 605px; left: 280px; width:66px; height:43px;" />
     <img class="flags" id="TERR21" src="@Url.Content("~/Content/Images/ROF.jpg")" style="position: absolute; top: 550px; left: 500px; width:66px; height:43px;" />
-    <img class="flags" id="TERR22" src="@Url.Content("~/Content/Images/NONE.png")" style="position: absolute; top: 560px; left: 713px; width:66px; height:43px;" />
+    <img class="flags" id="TERR22" src="@Url.Content("~/Content/Images/COA.jpg")" style="position: absolute; top: 560px; left: 713px; width:66px; height:43px;" />
     <img class="flags" id="TERR23" src="@Url.Content("~/Content/Images/COA.jpg")" style="position: absolute; top: 625px; left: 923px; width:66px; height:43px;" />
     <img class="flags" id="TERR24" src="@Url.Content("~/Content/Images/COA.jpg")" style="position: absolute; top: 602px; left: 1135px; width:66px; height:43px;" />
     <img class="flags" id="TERR25" src="@Url.Content("~/Content/Images/NONE.png")" style="position: absolute; top: 775px; left: 70px; width:66px; height:43px;" />
@@ -42,7 +42,7 @@
 </div>
 
 <map name="map">
-    <area shape="rect" coords="1068, 713, 1276, 886" href=/Map/SelectTerritory/30 />
+    <area shape="rect" coords="1068, 713, 1276, 886" onclick="ShowInformationOnTerritory(30)" />@*href=/Map/SelectTerritory/30 />*@
     <area shape="rect" coords="1066, 535, 1275, 712" href=/Map/SelectTerritory/24 />
     <area shape="rect" coords="1066, 356, 1276, 533" href=/Map/SelectTerritory/18 />
     <area shape="poly" coords="1062, 531, 1059, 359, 857, 358, 852, 483, 899, 573" href=/Map/SelectTerritory/17 />
@@ -73,4 +73,6 @@
     <area shape="poly" coords="195, 128, 437, 173, 426, 2, 212, 1" href="/Map/SelectTerritory/2" />
     <area id="onemap" shape="poly" coords="176, 247, 209, 2, 0, 3, 0, 142" href="/Map/SelectTerritory/1" />
 </map>
+
+@Scripts.Render("~/Scripts/Map/Map")
 

@@ -10,10 +10,9 @@ using DystopianWarsCampaign.Models;
 
 namespace DystopianWarsCampaign.Controllers.Admin
 {
-    //[Authorize(Roles="canEdit")]
     public class TerritoriesController : Controller
     {
-        private CampaignContext db = new CampaignContext();
+        private DystopianCampaignContext db = new DystopianCampaignContext();
 
         // GET: Territories
         public ActionResult Index()

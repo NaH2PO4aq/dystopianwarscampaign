@@ -10,7 +10,7 @@ namespace DystopianWarsCampaign.Controllers
 {
     public class SummaryController : Controller
     {
-        private CampaignContext db = new CampaignContext();
+        private DystopianCampaignContext db = new DystopianCampaignContext();
         // GET: Summary
         public ActionResult Index()
         {
