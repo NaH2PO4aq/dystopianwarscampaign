@@ -28,7 +28,7 @@ namespace DystopianWarsCampaign.Controllers
             {
                 return HttpNotFound();
             }
-            return View(territory);
+            return PartialView(territory);
         }
     }
 }
