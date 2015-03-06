@@ -224,6 +224,7 @@
     <Compile Include="Models\CampaignModels\Faction.cs" />
     <Compile Include="Models\AccountModels\IdentityModels.cs" />
     <Compile Include="Models\AccountModels\ManageViewModels.cs" />
+    <Compile Include="Models\CampaignModels\FleetEntry.cs" />
     <Compile Include="Models\CampaignModels\Territory.cs" />
     <Compile Include="Models\CampaignModels\TerritoryBonus.cs" />
     <Compile Include="Models\CampaignModels\TerritoryUpgrade.cs" />
@@ -285,7 +286,9 @@
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -345,6 +348,7 @@
     <Content Include="Views\Rules\Index.cshtml" />
     <Content Include="Views\Map\Index.cshtml" />
     <Content Include="Views\Summary\Faction.cshtml" />
+    <Content Include="Views\Map\SelectTerritory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

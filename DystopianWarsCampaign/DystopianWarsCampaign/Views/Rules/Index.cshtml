@@ -13,7 +13,6 @@
             <li><a href="#FleetManagement">Fleet Management</a></li>
             <li><a href="#AttackBonuses">Attack Bonuses</a></li>
             <li><a href="#Alliances">Alliances</a></li>
-            <li><a href="#Players">Player Participation</a></li>
             <li><a href="#Changelog">Changelog</a></li>
         </ul>
     </div>
@@ -38,7 +37,6 @@
     Each territory has a fixed terrain layout. This is known as the Operational Theatre Map.
     When playing a match, players are expected to match the layout on the Operational Theatre Map as closely as possible within reason.
     Deployment zones and strategic/operational advantage are determined as normal, with the option to modify certain aspects by spending RP as detailed in <a href="#WagingWar">Waging War</a>.
-    <br /><strong>*Designer's note: are deployment zones decided by owner of terrain?</strong><br />
     Territories are said to be connected when they have one shared border. Note that merely having a shared corner is not enough, so players cannot move into territories diagonally.
 </p>
 <h2 id="CampaignTurn">Campaign Turn</h2>
@@ -58,8 +56,7 @@
 </p>
 <h3>Upgrade Territories and declare attacks</h3>
 <p>
-    During this phase each player allocates part of his RP budget to territory upgrades and attacks. Note that RP does not carry over to the next turn but that you'll want to reserve some RP for repairs at the end of turn.
-    <br /><strong>*Designers note: We don't want RP to carry over, do we?</strong>
+    During this phase each player allocates part of his RP budget to territory upgrades and attacks. Any RP remaining at the end of the turn will carry over to the next turn.
 </p>
 <h3>Resolve conflicts</h3>
 <p>
@@ -101,7 +98,7 @@ All territory upgrades must be represented by appropriate scenery and/or tokens.
     <tr>
         <td>Airfield</td>
         <td>50</td>
-        <td>Allows local air support (up to 10 SAWs) in this and adjacent territories. See the entry for Forward Landing Field in each player's respective army list for statistics. Note that when fighting on the territory containing the Airfield this may result in having up to 19 additional SAWs!</td>
+        <td>Allows local air support (up to 10 SAWs) in this and adjacent territories. See the entry for Forward Landing Field in each player's respective army list for statistics. Note that when fighting on the territory containing the Airfield the provided 10 SAWs stack with the Carrier value of the Forward Landing field!</td>
     </tr>
     <tr>
         <td>Harbour</td>
@@ -176,7 +173,7 @@ Some territories provide inherent bonuses. If appropriate, these should be repre
             <td>600</td>
             <td>Medium/small only.</td>
             <td>None.</td>
-            <td>Attacker wins: affected territory does not provide requisition next turn. Defender wins: affected territory provides requisition as normal and attacker loses 10 RP. Note: if attacker does not have 10RP remaining, this is substracted from income for the next turn.</td>
+            <td>Attacker wins: affected territory does not provide requisition next turn. Defender wins: affected territory provides requisition as normal.</td>
         </tr>
         <tr>
             <td>Assault</td>
@@ -184,7 +181,7 @@ Some territories provide inherent bonuses. If appropriate, these should be repre
             <td>1000</td>
             <td>No dreadnoughts.</td>
             <td>None.</td>
-            <td>Attacker wins: affected territory provides half of its requisition to the attacker next turn and none to defending player. Defender wins: affected territory provides requisition as normal.</td>
+            <td>Attacker wins: affected territory provides its requisition to the attacker next turn and none to defending player. Defender wins: affected territory provides requisition as normal.</td>
         </tr>
         <tr>
             <td>Conquest</td>
@@ -196,7 +193,7 @@ Some territories provide inherent bonuses. If appropriate, these should be repre
         </tr>
     </table>
 </p>
-<h2 id="#FleetManagement">Fleet Management</h2>
+<h2 id="FleetManagement">Fleet Management</h2>
 <h3>Overview</h3>
 <p>
     Each player has two sets of fleet lists. One of these is the Home Fleet and the other is the Assault Fleet.
@@ -211,9 +208,27 @@ Some territories provide inherent bonuses. If appropriate, these should be repre
 </p>
 <h3>Repairs</h3>
 <p>
-
+    At the end of a battle ships may lie broken and battered. Mighty dreadnoughts are reduced to scrap metal. All damage to units and fortifications is done on a permanent basis. SAWs are replenished for free.
+</p>
+<p>
+    At the beginning of the repair step each ship automatically repairs 2 hull points. If a vessel has been completely destroyed/derelicted/prized an additional 1 RP must be paid to represent the effort of recovering the vessel. This means that most small vessels may be repaired free of charge. For each additional hull point to be repaired, 1 RP must be spend on a one-per-one basis.
+</p>
+<p>
+    <strong>Example:</strong> A 3-strong squadron of Riever cruisers engages in an assault. At the end of the assault one of the Rievers is destroyed, one has taken three damage and one has taken one damage. At the beginning of the repair step 1 RP must be paid to recover the destroyed Riever. It recovers two hull points automatically, leaving two hull points to be repaired. The other Rievers also regenerate two hull points. One Riever (with two hull points of damage) is repaired to full, the other one (with three hull points of damage) has one point of damage left to repair. This costs one additional RP.
+</p>
+<p>
+    In total this cruiser squadron has taken 4 + 3 + 2 = 9 hull points of damage. Of those, 2 + 2 + 2 = 6 hull points were repaired automatically. 3 hull points remaining cost 3 RP to repair and 1 additional RP is paid for the destroyed Riever, thus the player has to pay 4 RP to restore the Riever squad to full working order.
+</p>
+<p>
+    Note that if the player does not have sufficient RP, he or she may select which units are not repaired. These units enter their next battle damaged. In subsequent turns they repair two hull points automatically as normal.
+</p>
+<p>
+    If a fortification is destroyed, it may not be repaired. Instead the owning player must repurchase the territory upgrade. If the fortification is merely damaged, RP must be spend to repair it as normal.
 </p>
 <h3>Expanding the fleet lists</h3>
+<p>
+    As the campaign progresses, players may find that they are in need of more units for their fleets. New units may be bought during the fleet management phase. Each new unit costs 1 RP + 1 RP per hull point. For example, an Aristotle-class battleship with 8 hull points would cost 8 + 1 = 9 RP. When bought the unit is added to a fleet and may be used from the next turn onwards.
+</p>
 <h2 id="AttackBonuses">Attack Bonuses</h2>
 <p>
     Players may spend RP to gain advantages when -attacking- territories. This is especially useful for sieges and forays into heavily defended areas.
@@ -247,21 +262,54 @@ Some territories provide inherent bonuses. If appropriate, these should be repre
         </tr>
     </table>
 </p>
-<div style="display:none">
-    <h2 id="Alliances">Alliances</h2>
-    <p>
-        Players start out as part of one of three governing alliances: the Grand Coalition, the Imperial Bond and the Free Nations. Default allegiances are used, e.g. Prussian players start in the Imperial Bond and FSA players start in the Grand Coalition. Default alliance rules as detailed in the rulebook are in effect, with the following adjustments.
-        Players may only include allied detachments that consist of nations that are not actively participating in the campaign (e.g. the French Republic can take allies from the Ottoman Empire). If a player wishes to include detachments from a nation that is active in this campaign, both players must be part of the same alliance. Furthermore, permission to use the allied detachment must be granted by the allied nation.
-    </p>
-
-    <h2 id="Players">Player Participation</h2>
-    <h3>New player</h3>
-    <h3>Missing a Turn</h3>
-    <h3>Substituting players (example: CF can't make it to the fight, so PE substitutes for them)</h3>
-    <h3>Drop-out</h3>
-</div>
+<h2 id="Alliances">Alliances</h2>
+<h3>Overview</h3>
+<p>
+    Players may have one of three types of relationship with other players. Either they are at war, they have a cease-fire or they have an alliance.
+</p>
+<p>
+    Players start out without any allegiance whatsoever. Even if two players use the same faction, they do not start with an alliance or even cease-fire. If two players wish to broker a cease-fire agreement or alliance both have to declare this during Turn Phase #5: Resolve map updates. This means that they'll be able to coordinate attacks in their next turn, but other players will have the opportunity to strike as well. To commit to an alliance, both players must be in a cease-fire agreement beforehand for a full turn.
+</p>
+<h4>At War</h4>
+<p>
+    This is the default relationship between two players. Both players can freely attack each other.
+</p>
+<h4>Cease-Fire Agreement</h4>
+<p>
+    When a cease-fire agreement is in place, both players have agreed not to attack each other. They may not pass through each others territories nor benefit from territory upgrades the other player controls. Example: if an allied player controls a Radar Array next to an area where you are fighting, you do not gain the reroll for strategic advantage.
+</p>
+<p>
+    Cease-fire agreements may be broken unilaterally at any point in the game. This means that a player can blindside a player he or she has a cease-fire agreement with. If used in a hostile manner though (example: sneak attack), the offending player may not agree to cease-fire agreements for three turns.
+</p>
+<h4>Alliance</h4>
+<p>
+    When an alliance is in place, both players have agreed to work in concert to achieve their goals. They may benefit from fortification upgrades their allies confer. Example: if you fight in an area adjacent to an allies' Airfield you gain 10 SAWs. (Keep in mind they are your allies factions SAWs and thus may not benefit from your carrier actions unless both players are the same faction!)
+</p>
+<p>
+    Upon mutual agreement, an allied player may fight any battle in lieu of his ally, with the exception of conquest. The ally may defend for his or her ally during a conquest battle, but may not conquer territory for his or her ally. The non-fighting player provides the RP for the battle. If a Prussian player were to substitute for a French battle, the French player would pay the RP and the Prussians would resolve the conflict. Note that the French player does not pay for the repairs of the Prussian fleet!
+</p>
+<p>
+    An allied player may request RP from the other player to fund repairs, battles or advantages. An allied player may not request RP to aid in upgrading his or her territories.
+</p>
+<h3>Allied Detachments</h3>
+<p>
+    Players may only freely include allied detachments that consist of nations that are not actively participating in the campaign (e.g. the French Republic can take allies from the Ottoman Empire). If a player wishes to include detachments from a nation that is active in this campaign, both players must be part of the same alliance. Furthermore, permission to use the allied detachment must be granted by the allied nation.
+</p>
+<h3>Mercenaries</h3>
+<p>
+    Players may include mercenaries in their forces. Mercenaries are not added to the fleets as normal. Instead, they are requisitioned on a per-battle basis, where the hiring player has to pay 1 RP per 2 hull points (rounding up). The player does not pay for repairs on the mercenary ships.
+</p>
 <h2 id="Changelog">Changelog</h2>
 <p>
+    09-02-2015: Added missing rules
+    <ul>
+        <li>Added rules for repairs</li>
+        <li>Fully rewrote alliance rules, now includes cease-fire, alliance detachments, mercenaries</li>
+        <li>Removed 10 RP penalty for attacker losing for raid</li>
+        <li>RP now carries over from turn to turn</li>
+        <li>Deployment zones are chosen as normal (advantage roll)</li>
+        <li>Removed player participation section</li>
+    </ul>
     04-02-2015: Rules overhaul
     <ul>
         <li>Added overview</li>
