@@ -1,5 +1,33 @@
-﻿@model DystopianWarsCampaign.Models.Territory
+﻿@using DystopianWarsCampaign.Models.CampaignModels
+@model DystopianWarsCampaign.Models.Territory
 
+<h2>@Model.Name</h2>
 <p>
-    Territory = @Model.Name
+    @Model.Description
 </p>
+@if (@Model.Bonuses.Count > 0)
+{
+    <h3>Bonuses</h3>
+    <ul>
+
+        @foreach (TerritoryBonus bonus in @Model.Bonuses)
+        {
+            <li>
+                @bonus.Name
+            </li>
+        }
+    </ul>
+}
+@if (@Model.Upgrades.Count > 0)
+{
+    <h3>Upgrades</h3>
+    <ul>
+
+        @foreach (TerritoryUpgrade upgrade in @Model.Upgrades)
+        {
+            <li>
+                @upgrade.Name
+            </li>
+        }
+    </ul>
+}

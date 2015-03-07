@@ -4,12 +4,8 @@
 @section Scripts {
     @Scripts.Render("~/Scripts/Map/Map.js")
 }
-<div class="well" id="territoryDetails">
-    Territory =
-</div>
 
-
-<div style="position: relative; left: 0; top: 0;">
+<div style="position: relative; left: 0; top: 0; width:100%">
     <img src="@Url.Content("~/Content/Images/map3.jpg")" alt="" usemap="#map" style="position:relative; top: 0; left: 0;" />
     <img class="flags" id="TERR01" src="@Url.Content("~/Content/Images/NONE.png")" style="position: absolute; top: 70px; left: 70px; width:66px; height:43px;" />
     <img class="flags" id="TERR02" src="@Url.Content("~/Content/Images/FSA.jpg")" style="position: absolute; top: 50px; left: 280px; width:66px; height:43px;" />
@@ -75,6 +71,10 @@
     <area shape="poly" coords="195, 128, 437, 173, 426, 2, 212, 1" alt="2" href="" />
     <area id="onemap" shape="poly" coords="176, 247, 209, 2, 0, 3, 0, 142" alt="1" href="" />
 </map>
+
+<div class="well" id="territoryDetails">
+    Territory details...
+</div>
 
 <h1>
     Fleet lists
