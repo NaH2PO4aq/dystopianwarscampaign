@@ -47,8 +47,14 @@ namespace DystopianWarsCampaign.Migrations
                 new Faction{Name="Prussian Empire", Acronym="PE", FlagURL="~/Content/Images/PE.jpg"},
                 new Faction{Name="Covenant of Sidrial", Acronym="SID", FlagURL="~/Content/Images/SID.jpg"},
                 new Faction{Name="Covenant of Antarctica 11th War Fleet 'Novalis's Mercy'", Acronym="COA", FlagURL="~/Content/Images/COA.jpg"},
-                new Faction{Name="Republique of France", Acronym="RoF", FlagURL="~/Content/Images/ROF.jpg"},
-                new Faction{Name="None", Acronym="-", FlagURL="", AwayFleet="", HomeFleet=""}
+                new Faction{
+                    Name="Republique of France", 
+                    Acronym="RoF", 
+                    FlagURL="~/Content/Images/ROF.jpg",
+                    AwayFleet="",
+                    HomeFleet=""
+                },
+                new Faction{Name="Neutral", Acronym="-", FlagURL="", AwayFleet="", HomeFleet=""}
             };
             context.Factions.AddOrUpdate(fac => fac.Name, factions);
             context.SaveChanges();

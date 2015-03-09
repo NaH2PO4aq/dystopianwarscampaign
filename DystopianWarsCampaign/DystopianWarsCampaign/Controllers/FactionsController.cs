@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DystopianWarsCampaign.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,13 @@ namespace DystopianWarsCampaign.Controllers
 {
     public class FactionsController : Controller
     {
+        private DystopianCampaignContext db = new DystopianCampaignContext();
+
         // GET: Factions
         public ActionResult Index()
         {
-            return View();
+            var Factions = db.Factions.ToList();
+            return View(Factions);
         }
     }
 }
