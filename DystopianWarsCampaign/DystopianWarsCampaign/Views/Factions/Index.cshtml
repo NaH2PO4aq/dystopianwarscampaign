@@ -18,15 +18,11 @@
             @Html.DisplayNameFor(model => model.Acronym)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.FlagURL)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.HomeFleet)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.AwayFleet)
         </th>
-        <th></th>
     </tr>
 
 @foreach (var item in Model) {
@@ -38,18 +34,10 @@
             @Html.DisplayFor(modelItem => item.Acronym)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.FlagURL)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.HomeFleet)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.AwayFleet)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
         </td>
     </tr>
 }
