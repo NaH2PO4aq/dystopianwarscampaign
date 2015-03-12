@@ -1,374 +1,416 @@
-﻿@{
+﻿@using DystopianWarsCampaign.Models
+@model List<Territory>
+@{
     ViewBag.Title = "Index";
 }
 @section Scripts {
     @Scripts.Render("~/Scripts/Map/Map.js")
 }
+<script>
+    var app = angular.module("dystopianCampaign");
 
-<div style="position: relative; left: 0; top: 0; width:100%">
-    <img src="@Url.Content("~/Content/Images/map3.jpg")" alt="" usemap="#map" style="position:relative; top: 0; left: 0;" />
-    <img class="flags" id="TERR01" src="@Url.Content("~/Content/Images/FSA.jpg")" style="position: absolute; top: 70px; left: 70px; width:66px; height:43px;" />
-    <img class="flags" id="TERR02" src="@Url.Content("~/Content/Images/FSA.jpg")" style="position: absolute; top: 50px; left: 280px; width:66px; height:43px;" />
-    <img class="flags" id="TERR03" src="@Url.Content("~/Content/Images/FSA.jpg")" style="position: absolute; top: 50px; left: 500px; width:66px; height:43px;" />
-    <img class="flags" id="TERR04" src="@Url.Content("~/Content/Images/NONE.png")" style="position: absolute; top: 40px; left: 710px; width:66px; height:43px;" />
-    <img class="flags" id="TERR05" src="@Url.Content("~/Content/Images/SID.jpg")" style="position: absolute; top: 50px; left: 920px; width:66px; height:43px;" />
-    <img class="flags" id="TERR06" src="@Url.Content("~/Content/Images/SID.jpg")" style="position: absolute; top: 60px; left: 1135px; width:66px; height:43px;" />
-    <img class="flags" id="TERR07" src="@Url.Content("~/Content/Images/PE.jpg")" style="position: absolute; top: 260px; left: 57px; width:66px; height:43px;" />
-    <img class="flags" id="TERR08" src="@Url.Content("~/Content/Images/FSA.jpg")" style="position: absolute; top: 220px; left: 270px; width:66px; height:43px;" />
-    <img class="flags" id="TERR09" src="@Url.Content("~/Content/Images/FSA.jpg")" style="position: absolute; top: 230px; left: 510px; width:66px; height:43px;" />
-    <img class="flags" id="TERR10" src="@Url.Content("~/Content/Images/SID.jpg")" style="position: absolute; top: 220px; left: 690px; width:66px; height:43px;" />
-    <img class="flags" id="TERR11" src="@Url.Content("~/Content/Images/SID.jpg")" style="position: absolute; top: 230px; left: 908px; width:66px; height:43px;" />
-    <img class="flags" id="TERR12" src="@Url.Content("~/Content/Images/NONE.png")" style="position: absolute; top: 240px; left: 1135px; width:66px; height:43px;" />
-    <img class="flags" id="TERR13" src="@Url.Content("~/Content/Images/PE.jpg")" style="position: absolute; top: 425px; left: 70px; width:66px; height:43px;" />
-    <img class="flags" id="TERR14" src="@Url.Content("~/Content/Images/PE.jpg")" style="position: absolute; top: 425px; left: 280px; width:66px; height:43px;" />
-    <img class="flags" id="TERR15" src="@Url.Content("~/Content/Images/ROF.jpg")" style="position: absolute; top: 405px; left: 497px; width:66px; height:43px;" />
-    <img class="flags" id="TERR16" src="@Url.Content("~/Content/Images/NONE.png")" style="position: absolute; top: 395px; left: 713px; width:66px; height:43px;" />
-    <img class="flags" id="TERR17" src="@Url.Content("~/Content/Images/COA.jpg")" style="position: absolute; top: 430px; left: 923px; width:66px; height:43px;" />
-    <img class="flags" id="TERR18" src="@Url.Content("~/Content/Images/NONE.png")" style="position: absolute; top: 425px; left: 1135px; width:66px; height:43px;" />
-    <img class="flags" id="TERR19" src="@Url.Content("~/Content/Images/PE.jpg")" style="position: absolute; top: 595px; left: 70px; width:66px; height:43px;" />
-    <img class="flags" id="TERR20" src="@Url.Content("~/Content/Images/NONE.png")" style="position: absolute; top: 605px; left: 280px; width:66px; height:43px;" />
-    <img class="flags" id="TERR21" src="@Url.Content("~/Content/Images/ROF.jpg")" style="position: absolute; top: 550px; left: 500px; width:66px; height:43px;" />
-    <img class="flags" id="TERR22" src="@Url.Content("~/Content/Images/COA.jpg")" style="position: absolute; top: 560px; left: 713px; width:66px; height:43px;" />
-    <img class="flags" id="TERR23" src="@Url.Content("~/Content/Images/COA.jpg")" style="position: absolute; top: 625px; left: 923px; width:66px; height:43px;" />
-    <img class="flags" id="TERR24" src="@Url.Content("~/Content/Images/COA.jpg")" style="position: absolute; top: 602px; left: 1135px; width:66px; height:43px;" />
-    <img class="flags" id="TERR25" src="@Url.Content("~/Content/Images/PE.jpg")" style="position: absolute; top: 775px; left: 70px; width:66px; height:43px;" />
-    <img class="flags" id="TERR26" src="@Url.Content("~/Content/Images/ROF.jpg")" style="position: absolute; top: 785px; left: 280px; width:66px; height:43px;" />
-    <img class="flags" id="TERR27" src="@Url.Content("~/Content/Images/ROF.jpg")" style="position: absolute; top: 745px; left: 510px; width:66px; height:43px;" />
-    <img class="flags" id="TERR28" src="@Url.Content("~/Content/Images/ROF.jpg")" style="position: absolute; top: 775px; left: 720px; width:66px; height:43px;" />
-    <img class="flags" id="TERR29" src="@Url.Content("~/Content/Images/NONE.png")" style="position: absolute; top: 785px; left: 923px; width:66px; height:43px;" />
-    <img class="flags" id="TERR30" src="@Url.Content("~/Content/Images/COA.jpg")" style="position: absolute; top: 785px; left: 1135px; width:66px; height:43px;" />
+    app.controller("mapController", ["$scope", function ($scope) {
+        $scope.mapCoords =
+            [
+                [176, 247, 209, 2, 0, 3, 0, 142],                                                               //01
+                [195, 128, 437, 173, 426, 2, 212, 1],                                                           //02
+                [638, 2, 639, 105, 462, 176, 437, 171, 426, 2],                                                 //03
+                [1065, 0, 855, 2, 833, 72, 847, 128, 939, 154, 1067, 177],                                      //05
+                [1278, 2, 1067, 2, 1067, 177, 1278, 178],                                                       //06
+                [210, 354, 176, 247, 0, 144, 0, 354],                                                           //07
+                [369, 355, 402, 284, 466, 237, 459, 178, 193, 131, 179, 249, 210, 353],                         //08
+                [370, 355, 640, 355, 641, 104, 464, 177, 465, 235, 401, 284],                                   //09
+                [853, 353, 777, 148, 639, 72, 640, 353],                                                        //10
+                [1066, 353, 1066, 178, 938, 156, 849, 130, 779, 152, 853, 353],                                 //11
+                [1068, 355, 1278, 355, 1275, 176, 1068, 17],                                                    //12
+                [0, 355, 208, 534],                                                                             //13
+                [211, 356, 423, 536],                                                                           //14
+                [641, 357, 639, 467, 426, 533, 426, 358],                                                       //15
+                [642, 466, 642, 354, 853, 355, 849, 483],                                                       //16
+                [1062, 531, 1059, 359, 857, 358, 852, 483, 899, 573],                                           //17
+                [1066, 356, 1276, 533],                                                                         //18
+                [638, 69, 779, 149, 849, 128, 835, 70, 854, 2, 639, 1],                                         //18
+                [3, 538, 207, 711],                                                                             //19
+                [212, 707, 212, 539, 423, 538, 422, 750],                                                       //20
+                [639, 468, 423, 535, 423, 630, 637, 643],                                                       //21
+                [840, 593, 896, 578, 849, 482, 639, 469, 636, 642, 838, 743],                                   //22
+                [1065, 531, 896, 577, 838, 594, 838, 742, 1066, 711],                                           //23
+                [1066, 535, 1275, 712],                                                                         //24
+                [0, 888, 222, 887, 207, 708, 2, 710],                                                           //25
+                [211, 712, 422, 747, 422, 886, 221, 887],                                                       //26
+                [1067, 885, 1065, 712, 838, 743, 827, 884],                                                     //27
+                [638, 644, 693, 887, 423, 886, 424, 631],                                                       //27
+                [826, 886, 839, 743, 635, 643, 693, 885],                                                       //28
+                [1068, 713, 1276, 886]                                                                          //30
+            ];
+    }]);
+</script>
+<div ng-app="dystopianCampaign">
+    <div style="position: relative; left: 0; top: 0; width:100%">
+        <img src="@Url.Content("~/Content/Images/map3.jpg")" alt="" usemap="#map" style="position:relative; top: 0; left: 0;" />
+        <img class="flags" id="TERR01" src="@Url.Content("~/Content/Images/FSA.jpg")" style="position: absolute; top: 70px; left: 70px; width:66px; height:43px;" />
+        <img class="flags" id="TERR02" src="@Url.Content("~/Content/Images/FSA.jpg")" style="position: absolute; top: 50px; left: 280px; width:66px; height:43px;" />
+        <img class="flags" id="TERR03" src="@Url.Content("~/Content/Images/FSA.jpg")" style="position: absolute; top: 50px; left: 500px; width:66px; height:43px;" />
+        <img class="flags" id="TERR04" src="@Url.Content("~/Content/Images/NONE.png")" style="position: absolute; top: 40px; left: 710px; width:66px; height:43px;" />
+        <img class="flags" id="TERR05" src="@Url.Content("~/Content/Images/SID.jpg")" style="position: absolute; top: 50px; left: 920px; width:66px; height:43px;" />
+        <img class="flags" id="TERR06" src="@Url.Content("~/Content/Images/SID.jpg")" style="position: absolute; top: 60px; left: 1135px; width:66px; height:43px;" />
+        <img class="flags" id="TERR07" src="@Url.Content("~/Content/Images/PE.jpg")" style="position: absolute; top: 260px; left: 57px; width:66px; height:43px;" />
+        <img class="flags" id="TERR08" src="@Url.Content("~/Content/Images/FSA.jpg")" style="position: absolute; top: 220px; left: 270px; width:66px; height:43px;" />
+        <img class="flags" id="TERR09" src="@Url.Content("~/Content/Images/FSA.jpg")" style="position: absolute; top: 230px; left: 510px; width:66px; height:43px;" />
+        <img class="flags" id="TERR10" src="@Url.Content("~/Content/Images/SID.jpg")" style="position: absolute; top: 220px; left: 690px; width:66px; height:43px;" />
+        <img class="flags" id="TERR11" src="@Url.Content("~/Content/Images/SID.jpg")" style="position: absolute; top: 230px; left: 908px; width:66px; height:43px;" />
+        <img class="flags" id="TERR12" src="@Url.Content("~/Content/Images/NONE.png")" style="position: absolute; top: 240px; left: 1135px; width:66px; height:43px;" />
+        <img class="flags" id="TERR13" src="@Url.Content("~/Content/Images/PE.jpg")" style="position: absolute; top: 425px; left: 70px; width:66px; height:43px;" />
+        <img class="flags" id="TERR14" src="@Url.Content("~/Content/Images/PE.jpg")" style="position: absolute; top: 425px; left: 280px; width:66px; height:43px;" />
+        <img class="flags" id="TERR15" src="@Url.Content("~/Content/Images/ROF.jpg")" style="position: absolute; top: 405px; left: 497px; width:66px; height:43px;" />
+        <img class="flags" id="TERR16" src="@Url.Content("~/Content/Images/NONE.png")" style="position: absolute; top: 395px; left: 713px; width:66px; height:43px;" />
+        <img class="flags" id="TERR17" src="@Url.Content("~/Content/Images/COA.jpg")" style="position: absolute; top: 430px; left: 923px; width:66px; height:43px;" />
+        <img class="flags" id="TERR18" src="@Url.Content("~/Content/Images/NONE.png")" style="position: absolute; top: 425px; left: 1135px; width:66px; height:43px;" />
+        <img class="flags" id="TERR19" src="@Url.Content("~/Content/Images/PE.jpg")" style="position: absolute; top: 595px; left: 70px; width:66px; height:43px;" />
+        <img class="flags" id="TERR20" src="@Url.Content("~/Content/Images/NONE.png")" style="position: absolute; top: 605px; left: 280px; width:66px; height:43px;" />
+        <img class="flags" id="TERR21" src="@Url.Content("~/Content/Images/ROF.jpg")" style="position: absolute; top: 550px; left: 500px; width:66px; height:43px;" />
+        <img class="flags" id="TERR22" src="@Url.Content("~/Content/Images/COA.jpg")" style="position: absolute; top: 560px; left: 713px; width:66px; height:43px;" />
+        <img class="flags" id="TERR23" src="@Url.Content("~/Content/Images/COA.jpg")" style="position: absolute; top: 625px; left: 923px; width:66px; height:43px;" />
+        <img class="flags" id="TERR24" src="@Url.Content("~/Content/Images/COA.jpg")" style="position: absolute; top: 602px; left: 1135px; width:66px; height:43px;" />
+        <img class="flags" id="TERR25" src="@Url.Content("~/Content/Images/PE.jpg")" style="position: absolute; top: 775px; left: 70px; width:66px; height:43px;" />
+        <img class="flags" id="TERR26" src="@Url.Content("~/Content/Images/ROF.jpg")" style="position: absolute; top: 785px; left: 280px; width:66px; height:43px;" />
+        <img class="flags" id="TERR27" src="@Url.Content("~/Content/Images/ROF.jpg")" style="position: absolute; top: 745px; left: 510px; width:66px; height:43px;" />
+        <img class="flags" id="TERR28" src="@Url.Content("~/Content/Images/ROF.jpg")" style="position: absolute; top: 775px; left: 720px; width:66px; height:43px;" />
+        <img class="flags" id="TERR29" src="@Url.Content("~/Content/Images/NONE.png")" style="position: absolute; top: 785px; left: 923px; width:66px; height:43px;" />
+        <img class="flags" id="TERR30" src="@Url.Content("~/Content/Images/COA.jpg")" style="position: absolute; top: 785px; left: 1135px; width:66px; height:43px;" />
+    </div>
+
+    <map name="map">
+        <area shape="rect" coords="1068, 713, 1276, 886" alt="30" href="" />
+        <area shape="rect" coords="1066, 535, 1275, 712" alt="24" href="" />
+        <area shape="rect" coords="1066, 356, 1276, 533" alt="18" href="" />
+        <area shape="poly" coords="1062, 531, 1059, 359, 857, 358, 852, 483, 899, 573" alt="17" href="" />
+        <area shape="poly" coords="1065, 531, 896, 577, 838, 594, 838, 742, 1066, 711" alt="23" href="" />
+        <area shape="poly" coords="1067, 885, 1065, 712, 838, 743, 827, 884" alt="27" href="" />
+        <area shape="poly" coords="826, 886, 839, 743, 635, 643, 693, 885" alt="28" href="" />
+        <area shape="poly" coords="840, 593, 896, 578, 849, 482, 639, 469, 636, 642, 838, 743" alt="22" href="" />
+        <area shape="poly" coords="642, 466, 642, 354, 853, 355, 849, 483" alt="16" href="" />
+        <area shape="poly" coords="641, 357, 639, 467, 426, 533, 426, 358" alt="15" href="" />
+        <area shape="poly" coords="639, 468, 423, 535, 423, 630, 637, 643" alt="21" href="" />
+        <area shape="poly" coords="638, 644, 693, 887, 423, 886, 424, 631" alt="27" href="" />
+        <area shape="poly" coords="212, 707, 212, 539, 423, 538, 422, 750" alt="20" href="" />
+        <area shape="poly" coords="211, 712, 422, 747, 422, 886, 221, 887" alt="26" href="" />
+        <area shape="poly" coords="0, 888, 222, 887, 207, 708, 2, 710" alt="25" href="" />
+        <area shape="rect" coords="3, 538, 207, 711" alt="19" href="" />
+        <area shape="rect" coords="211, 356, 423, 536" alt="14" href="" />
+        <area shape="rect" coords="0, 355, 208, 534" alt="13" href="" />
+        <area shape="poly" coords="1068, 355, 1278, 355, 1275, 176, 1068, 176" alt="12" href="" />
+        <area shape="poly" coords="1278, 2, 1067, 2, 1067, 177, 1278, 178" alt="6" href="" />
+        <area shape="poly" coords="1065, 0, 855, 2, 833, 72, 847, 128, 939, 154, 1067, 177" alt="5" href="" />
+        <area shape="poly" coords="1066, 353, 1066, 178, 938, 156, 849, 130, 779, 152, 853, 353" alt="11" href="" />
+        <area shape="poly" coords="853, 353, 777, 148, 639, 72, 640, 353" alt="10" href="" />
+        <area shape="poly" coords="370, 355, 640, 355, 641, 104, 464, 177, 465, 235, 401, 284" alt="9" href="" />
+        <area shape="poly" coords="638, 69, 779, 149, 849, 128, 835, 70, 854, 2, 639, 1" alt="18" href="" />
+        <area shape="poly" coords="638, 2, 639, 105, 462, 176, 437, 171, 426, 2" alt="3" href="" />
+        <area shape="poly" coords="369, 355, 402, 284, 466, 237, 459, 178, 193, 131, 179, 249, 210, 353" alt="8" href="" />
+        <area shape="poly" coords="210, 354, 176, 247, 0, 144, 0, 354" alt="7" href="" />
+        <area shape="poly" coords="195, 128, 437, 173, 426, 2, 212, 1" alt="2" href="" />
+        <area id="onemap" shape="poly" coords="176, 247, 209, 2, 0, 3, 0, 142" alt="1" href="" />
+    </map>
+
+    <div class="well" id="territoryDetails">
+        Territory details...
+    </div>
+
+    <h1>
+        Fleet lists
+    </h1>
+    <h2>
+        Covenant of Antarctica 11th War Fleet 'Novalis's Mercy'
+    </h2>
+    <h3>Home Fleet</h3>
+    <p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Point value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Diophantus Assault Carrier</td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>Aristotle Battleship + Energy & Disruption</td>
+                    <td>205</td>
+                </tr>
+                <tr>
+                    <td>Euclid Sky Dreadnought + Target Painter & Combat Coordinator</td>
+                    <td>305</td>
+                </tr>
+                <tr>
+                    <td>Callimachus Alpha Time Orb</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>Callimachus Beta Battle Orb</td>
+                    <td>85</td>
+                </tr>
+                <tr>
+                    <td>Diophantus Assault Carrier</td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>Hippasus Battle Cruiser + Energy</td>
+                    <td>130</td>
+                </tr>
+                <tr>
+                    <td>Cleomedes Cruiser 3x + Energy</td>
+                    <td>240</td>
+                </tr>
+                <tr>
+                    <td>Zeno Armoured Cruisers 3x </td>
+                    <td>270</td>
+                </tr>
+                <tr>
+                    <td>Icarus Medium Flyer + Energy 2x</td>
+                    <td>160</td>
+                </tr>
+                <tr>
+                    <td>Ptolemy Mine-Layer Flyers 2x</td>
+                    <td>120</td>
+                </tr>
+                <tr>
+                    <td>Diogenes Frigates 4x</td>
+                    <td>120</td>
+                </tr>
+                <tr>
+                    <td>Thales Corvettes 5x</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Plutarch Heavy Destroyer 3x</td>
+                    <td>135</td>
+                </tr>
+                <tr>
+                    <td>Galen Escorts 1x</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>Alea Escort Flyers 2x</td>
+                    <td>60</td>
+                </tr>
+            </tbody>
+        </table>
+    </p>
+    <h3>Assault Fleet</h3>
+    <p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Point value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Diophantus Assault Carrier</td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>Aristotle Battleship + Energy & Disruption</td>
+                    <td>205</td>
+                </tr>
+                <tr>
+                    <td>Euclid Sky Dreadnought + Target Painter & Combat Coordinator</td>
+                    <td>305</td>
+                </tr>
+                <tr>
+                    <td>Callimachus Alpha Time Orb</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>Callimachus Beta Battle Orb</td>
+                    <td>85</td>
+                </tr>
+                <tr>
+                    <td>Diophantus Assault Carrier</td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>Hippasus Battle Cruiser + Energy</td>
+                    <td>130</td>
+                </tr>
+                <tr>
+                    <td>Cleomedes Cruiser 3x + Energy</td>
+                    <td>240</td>
+                </tr>
+                <tr>
+                    <td>Zeno Armoured Cruisers 3x </td>
+                    <td>270</td>
+                </tr>
+                <tr>
+                    <td>Icarus Medium Flyer + Energy 2x</td>
+                    <td>160</td>
+                </tr>
+                <tr>
+                    <td>Ptolemy Mine-Layer Flyers 2x</td>
+                    <td>120</td>
+                </tr>
+                <tr>
+                    <td>Diogenes Frigates 4x</td>
+                    <td>120</td>
+                </tr>
+                <tr>
+                    <td>Thales Corvettes 5x</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Plutarch Heavy Destroyer 3x</td>
+                    <td>135</td>
+                </tr>
+                <tr>
+                    <td>Galen Escorts 1x</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>Alea Escort Flyers 2x</td>
+                    <td>60</td>
+                </tr>
+            </tbody>
+        </table>
+    </p>
+    <h2>
+        Republique of France
+    </h2>
+    <p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Point value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </p>
+    <h2>
+        Prussian Empire
+    </h2>
+    <p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Point value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </p>
+    <h2>
+        Covenant of Sidrial
+    </h2>
+    ASSAULT Fleet:
+
+    Fleet Value: 2000 (0 left)
+
+    Massive/Large: 575 (29%)
+    Medium: 900 (45%)
+    Small: 525 (26%)
+    Tiny: 0 (0%)
+
+    Naval: 91%
+    Aerial: 0%
+    Armoured: 9%
+    Fortifications: 0%
+    Infantry: 0%
+
+    <table>
+        <tr><td>1x Diophantus (Assault Carrier) - Nav. Massive - 200 - 1/1</td></tr>
+        <tr><td>1x Callimachus-Alpha (Time Orb) - Arm. Large - 90 - 1/1   </td></tr>
+        <tr><td>1x Callimachus-Beta (Battle Orb) - Arm. Large - 85 - 1/1  </td></tr>
+        <tr><td>1x Aristotle (Battleship) - Nav. Large - 200 - 1/1        </td></tr>
+        <tr><td>1x Hippasus (Battle Cruiser) - Nav. Medium - 120 - 1/1    </td></tr>
+        <tr><td>2x Fresnel (Gunship) - Nav. Medium - 180 - 1/2            </td></tr>
+        <tr><td>1x Fresnel (Gunship) - Nav. Medium - 90 - 1/2             </td></tr>
+        <tr><td>3x Zeno (Armoured Cruiser) - Nav. Medium - 270 - 1/3      </td></tr>
+        <tr><td>3x Cleomedes (Cruiser) - Nav. Medium - 240 - 2/3          </td></tr>
+        <tr><td>3x Plutarch (Heavy Destroyer) - Nav. Small - 135 - 2/3    </td></tr>
+        <tr><td>2x Plutarch (Heavy Destroyer) - Nav. Small - 90 - 2/3     </td></tr>
+        <tr><td>4x Diogenes (Frigate) - Nav. Small - 100 - 2/4            </td></tr>
+        <tr><td>5x Thales (Corvette) - Nav. Small - 100 - 2/5             </td></tr>
+        <tr><td>5x Thales (Corvette) - Nav. Small - 100 - 2/5             </td></tr>
+    </table>
+
+
+    HOME Fleet:
+
+    Fleet Value: 2000 (0 left)
+    Massive/Large: 1030 (52%)
+    Medium: 660 (33%)
+    Small: 310 (16%)
+    Tiny: 0 (0%)
+
+    Naval: 83%
+    Aerial: 9%
+    Armoured: 9%
+    Fortifications: 0%
+    Infantry: 0%
+
+    1x Prometheus (Dreadnought) - Nav. Massive - 320 - 1/1
+    1x Pericles (Fleet Carrier) - Nav. Massive - 165 - 1/1
+    1x Epicurus (Sky Fortress) - Aer. Massive - 170 - 1/1
+    1x Aristotle (Battleship) - Nav. Large - 200 - 1/1
+    1x Callimachus-Beta (Battle Orb) - Arm. Large - 85 - 1/1
+    1x Callimachus-Alpha (Time Orb) - Arm. Large - 90 - 1/1
+    1x Hippasus (Battle Cruiser) - Nav. Medium - 120 - 1/1
+    2x Fresnel (Gunship) - Nav. Medium - 180 - 1/2
+    1x Fresnel (Gunship) - Nav. Medium - 90 - 1/2
+    3x Zeno (Armoured Cruiser) - Nav. Medium - 270 - 1/3
+    4x Diogenes (Frigate) - Nav. Small - 100 - 2/4
+    3x Plutarch (Heavy Destroyer) - Nav. Small - 135 - 2/3
+    3x Galen (Escort) - Nav. Small - 75 - 1/3
+    <p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Point value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </p>
+    <h2>
+        Federated States of America
+    </h2>
+    <p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Point value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </p>
 </div>
-
-<map name="map">
-    <area shape="rect" coords="1068, 713, 1276, 886" alt="30" href="" />
-    <area shape="rect" coords="1066, 535, 1275, 712" alt="24" href="" />
-    <area shape="rect" coords="1066, 356, 1276, 533" alt="18" href="" />
-    <area shape="poly" coords="1062, 531, 1059, 359, 857, 358, 852, 483, 899, 573" alt="17" href="" />
-    <area shape="poly" coords="1065, 531, 896, 577, 838, 594, 838, 742, 1066, 711" alt="23" href="" />
-    <area shape="poly" coords="1067, 885, 1065, 712, 838, 743, 827, 884" alt="27" href="" />
-    <area shape="poly" coords="826, 886, 839, 743, 635, 643, 693, 885" alt="28" href="" />
-    <area shape="poly" coords="840, 593, 896, 578, 849, 482, 639, 469, 636, 642, 838, 743" alt="22" href="" />
-    <area shape="poly" coords="642, 466, 642, 354, 853, 355, 849, 483" alt="16" href="" />
-    <area shape="poly" coords="641, 357, 639, 467, 426, 533, 426, 358" alt="15" href="" />
-    <area shape="poly" coords="639, 468, 423, 535, 423, 630, 637, 643" alt="21" href="" />
-    <area shape="poly" coords="638, 644, 693, 887, 423, 886, 424, 631" alt="27" href="" />
-    <area shape="poly" coords="212, 707, 212, 539, 423, 538, 422, 750" alt="20" href="" />
-    <area shape="poly" coords="211, 712, 422, 747, 422, 886, 221, 887" alt="26" href="" />
-    <area shape="poly" coords="0, 888, 222, 887, 207, 708, 2, 710" alt="25" href="" />
-    <area shape="rect" coords="3, 538, 207, 711" alt="19" href="" />
-    <area shape="rect" coords="211, 356, 423, 536" alt="14" href="" />
-    <area shape="rect" coords="0, 355, 208, 534" alt="13" href="" />
-    <area shape="poly" coords="1068, 355, 1278, 355, 1275, 176, 1068, 176" alt="12" href="" />
-    <area shape="poly" coords="1278, 2, 1067, 2, 1067, 177, 1278, 178" alt="6" href="" />
-    <area shape="poly" coords="1065, 0, 855, 2, 833, 72, 847, 128, 939, 154, 1067, 177" alt="5" href="" />
-    <area shape="poly" coords="1066, 353, 1066, 178, 938, 156, 849, 130, 779, 152, 853, 353" alt="11" href="" />
-    <area shape="poly" coords="853, 353, 777, 148, 639, 72, 640, 353" alt="10" href="" />
-    <area shape="poly" coords="370, 355, 640, 355, 641, 104, 464, 177, 465, 235, 401, 284" alt="9" href="" />
-    <area shape="poly" coords="638, 69, 779, 149, 849, 128, 835, 70, 854, 2, 639, 1" alt="18" href="" />
-    <area shape="poly" coords="638, 2, 639, 105, 462, 176, 437, 171, 426, 2" alt="3" href="" />
-    <area shape="poly" coords="369, 355, 402, 284, 466, 237, 459, 178, 193, 131, 179, 249, 210, 353" alt="8" href="" />
-    <area shape="poly" coords="210, 354, 176, 247, 0, 144, 0, 354" alt="7" href="" />
-    <area shape="poly" coords="195, 128, 437, 173, 426, 2, 212, 1" alt="2" href="" />
-    <area id="onemap" shape="poly" coords="176, 247, 209, 2, 0, 3, 0, 142" alt="1" href="" />
-</map>
-
-<div class="well" id="territoryDetails">
-    Territory details...
-</div>
-
-<h1>
-    Fleet lists
-</h1>
-<h2>
-    Covenant of Antarctica 11th War Fleet 'Novalis's Mercy'
-</h2>
-<h3>Home Fleet</h3>
-<p>
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Point value</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Diophantus Assault Carrier</td>
-                <td>200</td>
-            </tr>
-            <tr>
-                <td>Aristotle Battleship + Energy & Disruption</td>
-                <td>205</td>
-            </tr>
-            <tr>
-                <td>Euclid Sky Dreadnought + Target Painter & Combat Coordinator</td>
-                <td>305</td>
-            </tr>
-            <tr>
-                <td>Callimachus Alpha Time Orb</td>
-                <td>90</td>
-            </tr>
-            <tr>
-                <td>Callimachus Beta Battle Orb</td>
-                <td>85</td>
-            </tr>
-            <tr>
-                <td>Diophantus Assault Carrier</td>
-                <td>200</td>
-            </tr>
-            <tr>
-                <td>Hippasus Battle Cruiser + Energy</td>
-                <td>130</td>
-            </tr>
-            <tr>
-                <td>Cleomedes Cruiser 3x + Energy</td>
-                <td>240</td>
-            </tr>
-            <tr>
-                <td>Zeno Armoured Cruisers 3x </td>
-                <td>270</td>
-            </tr>
-            <tr>
-                <td>Icarus Medium Flyer + Energy 2x</td>
-                <td>160</td>
-            </tr>
-            <tr>
-                <td>Ptolemy Mine-Layer Flyers 2x</td>
-                <td>120</td>
-            </tr>
-            <tr>
-                <td>Diogenes Frigates 4x</td>
-                <td>120</td>
-            </tr>
-            <tr>
-                <td>Thales Corvettes 5x</td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>Plutarch Heavy Destroyer 3x</td>
-                <td>135</td>
-            </tr>
-            <tr>
-                <td>Galen Escorts 1x</td>
-                <td>25</td>
-            </tr>
-            <tr>
-                <td>Alea Escort Flyers 2x</td>
-                <td>60</td>
-            </tr>
-        </tbody>
-    </table>
-</p>
-<h3>Assault Fleet</h3>
-<p>
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Point value</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Diophantus Assault Carrier</td>
-                <td>200</td>
-            </tr>
-            <tr>
-                <td>Aristotle Battleship + Energy & Disruption</td>
-                <td>205</td>
-            </tr>
-            <tr>
-                <td>Euclid Sky Dreadnought + Target Painter & Combat Coordinator</td>
-                <td>305</td>
-            </tr>
-            <tr>
-                <td>Callimachus Alpha Time Orb</td>
-                <td>90</td>
-            </tr>
-            <tr>
-                <td>Callimachus Beta Battle Orb</td>
-                <td>85</td>
-            </tr>
-            <tr>
-                <td>Diophantus Assault Carrier</td>
-                <td>200</td>
-            </tr>
-            <tr>
-                <td>Hippasus Battle Cruiser + Energy</td>
-                <td>130</td>
-            </tr>
-            <tr>
-                <td>Cleomedes Cruiser 3x + Energy</td>
-                <td>240</td>
-            </tr>
-            <tr>
-                <td>Zeno Armoured Cruisers 3x </td>
-                <td>270</td>
-            </tr>
-            <tr>
-                <td>Icarus Medium Flyer + Energy 2x</td>
-                <td>160</td>
-            </tr>
-            <tr>
-                <td>Ptolemy Mine-Layer Flyers 2x</td>
-                <td>120</td>
-            </tr>
-            <tr>
-                <td>Diogenes Frigates 4x</td>
-                <td>120</td>
-            </tr>
-            <tr>
-                <td>Thales Corvettes 5x</td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>Plutarch Heavy Destroyer 3x</td>
-                <td>135</td>
-            </tr>
-            <tr>
-                <td>Galen Escorts 1x</td>
-                <td>25</td>
-            </tr>
-            <tr>
-                <td>Alea Escort Flyers 2x</td>
-                <td>60</td>
-            </tr>
-        </tbody>
-    </table>
-</p>
-<h2>
-    Republique of France
-</h2>
-<p>
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Point value</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
-</p>
-<h2>
-    Prussian Empire
-</h2>
-<p>
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Point value</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
-</p>
-<h2>
-    Covenant of Sidrial
-</h2>
-ASSAULT Fleet:
-
-Fleet Value: 2000 (0 left)
-
-Massive/Large: 575 (29%)
-Medium: 900 (45%)
-Small: 525 (26%)
-Tiny: 0 (0%)
-
-Naval: 91%
-Aerial: 0%
-Armoured: 9%
-Fortifications: 0%
-Infantry: 0%
-
-<table>
-    <tr><td>1x Diophantus (Assault Carrier) - Nav. Massive - 200 - 1/1</td></tr>
-    <tr><td>1x Callimachus-Alpha (Time Orb) - Arm. Large - 90 - 1/1   </td></tr>
-    <tr><td>1x Callimachus-Beta (Battle Orb) - Arm. Large - 85 - 1/1  </td></tr>
-    <tr><td>1x Aristotle (Battleship) - Nav. Large - 200 - 1/1        </td></tr>
-    <tr><td>1x Hippasus (Battle Cruiser) - Nav. Medium - 120 - 1/1    </td></tr>
-    <tr><td>2x Fresnel (Gunship) - Nav. Medium - 180 - 1/2            </td></tr>
-    <tr><td>1x Fresnel (Gunship) - Nav. Medium - 90 - 1/2             </td></tr>
-    <tr><td>3x Zeno (Armoured Cruiser) - Nav. Medium - 270 - 1/3      </td></tr>
-    <tr><td>3x Cleomedes (Cruiser) - Nav. Medium - 240 - 2/3          </td></tr>
-    <tr><td>3x Plutarch (Heavy Destroyer) - Nav. Small - 135 - 2/3    </td></tr>
-    <tr><td>2x Plutarch (Heavy Destroyer) - Nav. Small - 90 - 2/3     </td></tr>
-    <tr><td>4x Diogenes (Frigate) - Nav. Small - 100 - 2/4            </td></tr>
-    <tr><td>5x Thales (Corvette) - Nav. Small - 100 - 2/5             </td></tr>
-    <tr><td>5x Thales (Corvette) - Nav. Small - 100 - 2/5             </td></tr>
-</table>
-
-
-HOME Fleet:
-
-Fleet Value: 2000 (0 left)
-Massive/Large: 1030 (52%)
-Medium: 660 (33%)
-Small: 310 (16%)
-Tiny: 0 (0%)
-
-Naval: 83%
-Aerial: 9%
-Armoured: 9%
-Fortifications: 0%
-Infantry: 0%
-
-1x Prometheus (Dreadnought) - Nav. Massive - 320 - 1/1
-1x Pericles (Fleet Carrier) - Nav. Massive - 165 - 1/1
-1x Epicurus (Sky Fortress) - Aer. Massive - 170 - 1/1
-1x Aristotle (Battleship) - Nav. Large - 200 - 1/1
-1x Callimachus-Beta (Battle Orb) - Arm. Large - 85 - 1/1
-1x Callimachus-Alpha (Time Orb) - Arm. Large - 90 - 1/1
-1x Hippasus (Battle Cruiser) - Nav. Medium - 120 - 1/1
-2x Fresnel (Gunship) - Nav. Medium - 180 - 1/2
-1x Fresnel (Gunship) - Nav. Medium - 90 - 1/2
-3x Zeno (Armoured Cruiser) - Nav. Medium - 270 - 1/3
-4x Diogenes (Frigate) - Nav. Small - 100 - 2/4
-3x Plutarch (Heavy Destroyer) - Nav. Small - 135 - 2/3
-3x Galen (Escort) - Nav. Small - 75 - 1/3
-<p>
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Point value</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
-</p>
-<h2>
-    Federated States of America
-</h2>
-<p>
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Point value</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
-</p>
