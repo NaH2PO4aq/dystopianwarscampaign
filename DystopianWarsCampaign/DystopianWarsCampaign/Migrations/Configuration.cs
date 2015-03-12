@@ -54,7 +54,81 @@ namespace DystopianWarsCampaign.Migrations
                     Name="Republique of France", 
                     Acronym="RoF", 
                     FlagURL="~/Content/Images/ROF.jpg",
-                    AwayFleet="",
+                    AwayFleet=
+                        @"<table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Point value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Diophantus Assault Carrier</td>
+                                    <td>200</td>
+                                </tr>
+                                <tr>
+                                    <td>Aristotle Battleship + Energy & Disruption</td>
+                                    <td>205</td>
+                                </tr>
+                                <tr>
+                                    <td>Euclid Sky Dreadnought + Target Painter & Combat Coordinator</td>
+                                    <td>305</td>
+                                </tr>
+                                <tr>
+                                    <td>Callimachus Alpha Time Orb</td>
+                                    <td>90</td>
+                                </tr>
+                                <tr>
+                                    <td>Callimachus Beta Battle Orb</td>
+                                    <td>85</td>
+                                </tr>
+                                <tr>
+                                    <td>Diophantus Assault Carrier</td>
+                                    <td>200</td>
+                                </tr>
+                                <tr>
+                                    <td>Hippasus Battle Cruiser + Energy</td>
+                                    <td>130</td>
+                                </tr>
+                                <tr>
+                                    <td>Cleomedes Cruiser 3x + Energy</td>
+                                    <td>240</td>
+                                </tr>
+                                <tr>
+                                    <td>Zeno Armoured Cruisers 3x </td>
+                                    <td>270</td>
+                                </tr>
+                                <tr>
+                                    <td>Icarus Medium Flyer + Energy 2x</td>
+                                    <td>160</td>
+                                </tr>
+                                <tr>
+                                    <td>Ptolemy Mine-Layer Flyers 2x</td>
+                                    <td>120</td>
+                                </tr>
+                                <tr>
+                                    <td>Diogenes Frigates 4x</td>
+                                    <td>120</td>
+                                </tr>
+                                <tr>
+                                    <td>Thales Corvettes 5x</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td>Plutarch Heavy Destroyer 3x</td>
+                                    <td>135</td>
+                                </tr>
+                                <tr>
+                                    <td>Galen Escorts 1x</td>
+                                    <td>25</td>
+                                </tr>
+                                <tr>
+                                    <td>Alea Escort Flyers 2x</td>
+                                    <td>60</td>
+                                </tr>
+                            </tbody>
+                        </table>",
                     HomeFleet=""
                 },
                 new Faction{Name="Neutral", Acronym="-", FlagURL="", AwayFleet="", HomeFleet=""}
