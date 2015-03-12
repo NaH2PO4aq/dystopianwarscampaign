@@ -38,15 +38,15 @@
                 @Html.DisplayFor(modelItem => item.Acronym)
             </td>
             <td>
-                ...@*@Html.Raw(item.HomeFleet)*@
+                @Html.Raw(item.HomeFleet)
             </td>
             <td>
-                ...@*@Html.Raw(item.AwayFleet)*@
+                @Html.Raw(item.AwayFleet)
             </td>
         </tr>
     }
 </table>
-<h2>Lists</h2>
+@*<h2>Lists</h2>
 @foreach (var item in Model)
 {
     <p>
@@ -54,6 +54,6 @@
     </p>
     <p>
         @Html.Raw(item.AwayFleet)
-    </p>
+    </p>*@
 
 }
