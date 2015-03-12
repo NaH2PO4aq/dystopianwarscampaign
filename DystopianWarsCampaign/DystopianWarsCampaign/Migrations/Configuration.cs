@@ -20,8 +20,11 @@ namespace DystopianWarsCampaign.Migrations
             var territoryBonuses = new TerritoryBonus[]
             {
                 new TerritoryBonus{Name="Town", Description="+10 additional requisition per turn."},
+                new TerritoryBonus{Name="Town", Description="+10 additional requisition per turn."},
+                new TerritoryBonus{Name="Oil Rigs", Description="+10 additional requisition per turn."},
                 new TerritoryBonus{Name="Oil Rigs", Description="+10 additional requisition per turn."},
                 new TerritoryBonus{Name="Industrial Complex", Description="+10 additional requisition per turn."},
+                new TerritoryBonus{Name="Inhospitable", Description="Upgrades on this territory cost an additional 50%."},
                 new TerritoryBonus{Name="Inhospitable", Description="Upgrades on this territory cost an additional 50%."},
                 new TerritoryBonus{Name="Monument", Description="Uses standard tower stats without weapons. Provides Die Hard Attitude (Owner's Faction, 16'')."},
                 new TerritoryBonus{Name="Lighthouse", Description="Uses standard tower stats without weapons. May function as an Expert Spotter."}
@@ -94,17 +97,17 @@ namespace DystopianWarsCampaign.Migrations
             };
             //Towns
             territories[14].Bonuses.Add(territoryBonuses[0]);
-            territories[21].Bonuses.Add(territoryBonuses[0]);
+            territories[21].Bonuses.Add(territoryBonuses[1]);
             //Rigs
-            territories[9].Bonuses.Add(territoryBonuses[1]);
-            territories[15].Bonuses.Add(territoryBonuses[1]);
+            territories[9].Bonuses.Add(territoryBonuses[2]);
+            territories[15].Bonuses.Add(territoryBonuses[3]);
             //Industrial Complex
-            territories[8].Bonuses.Add(territoryBonuses[2]);
+            territories[8].Bonuses.Add(territoryBonuses[4]);
             //Inhospitable
-            territories[11].Bonuses.Add(territoryBonuses[3]);
-            territories[24].Bonuses.Add(territoryBonuses[3]);
+            territories[11].Bonuses.Add(territoryBonuses[5]);
+            territories[24].Bonuses.Add(territoryBonuses[6]);
             //Monuments
-            territories[28].Bonuses.Add(territoryBonuses[4]);
+            territories[28].Bonuses.Add(territoryBonuses[7]);
 
             context.Territories.AddOrUpdate(t => t.Name, territories);
             context.SaveChanges();

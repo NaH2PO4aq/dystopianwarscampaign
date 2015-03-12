@@ -14,7 +14,8 @@ namespace DystopianWarsCampaign.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            List<Territory> territories = db.Territories.ToList();
+            return View(territories);
         }
 
         public ActionResult SelectTerritory(int? id)
