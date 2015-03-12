@@ -99,7 +99,8 @@ namespace DystopianWarsCampaign.Migrations
                          <tr><td>3x Zeno (Armoured Cruiser) </td><td> Nav. Medium </td><td> 270 </td><td> 1/3           </td></tr>
                          <tr><td>4x Diogenes (Frigate) </td><td> Nav. Small </td><td> 100 </td><td> 2/4                 </td></tr>
                          <tr><td>3x Plutarch (Heavy Destroyer) </td><td> Nav. Small </td><td> 135 </td><td> 2/3         </td></tr>
-                         <tr><td>3x Galen (Escort) </td><td> Nav. Small </td><td> 75 </td><td> 1/3                      </td></tr>                        </tbody>
+                         <tr><td>3x Galen (Escort) </td><td> Nav. Small </td><td> 75 </td><td> 1/3                      </td></tr>
+                        </tbody>
                     </table>",
                 },
                 new Faction{

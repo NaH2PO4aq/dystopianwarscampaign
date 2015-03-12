@@ -27,25 +27,33 @@
     </tr>
 
 
-@foreach (var item in Model) {
+    @foreach (var item in Model)
+    {
 
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Acronym)
-        </td>
-        <td>
-            @Html.Raw(item.HomeFleet)
-        </td>
-        <td>
-            @Html.Raw(item.AwayFleet) 
-        </td>
-    </tr>
-}
-
-
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Acronym)
+            </td>
+            <td>
+                ...@*@Html.Raw(item.HomeFleet)*@
+            </td>
+            <td>
+                ...@*@Html.Raw(item.AwayFleet)*@
+            </td>
+        </tr>
+    }
 </table>
+<h2>Lists</h2>
+@foreach (var item in Model)
+{
+    <p>
+        @Html.Raw(item.HomeFleet)
+    </p>
+    <p>
+        @Html.Raw(item.AwayFleet)
+    </p>
 
-
+}
