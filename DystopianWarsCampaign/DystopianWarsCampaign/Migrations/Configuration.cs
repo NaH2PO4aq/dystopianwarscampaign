@@ -44,91 +44,76 @@ namespace DystopianWarsCampaign.Migrations
             context.TerritoryUpgrades.AddOrUpdate(tu => tu.Name, territoryUpgrades);
             context.SaveChanges();
 
+            
             var factions = new Faction[]
             {
-                new Faction{Name="Federated States of America", Acronym="FSA", FlagURL="~/Content/Images/FSA.jpg"},
-                new Faction{Name="Prussian Empire", Acronym="PE", FlagURL="~/Content/Images/PE.jpg"},
-                new Faction{Name="Covenant of Sidrial", Acronym="SID", FlagURL="~/Content/Images/SID.jpg"},
-                new Faction{Name="Covenant of Antarctica 11th War Fleet 'Novalis's Mercy'", Acronym="COA", FlagURL="~/Content/Images/COA.jpg"},
+                new Faction{
+                    Name="Federated States of America", 
+                    Acronym="FSA", 
+                    FlagURL="~/Content/Images/FSA.jpg", 
+                    AwayFleet="",
+                    HomeFleet=""
+                },
+                new Faction{
+                    Name="Prussian Empire",
+                    Acronym="PE",
+                    FlagURL="~/Content/Images/PE.jpg",
+                    AwayFleet="",
+                    HomeFleet=""
+                },
+                new Faction{
+                    Name="Covenant of Sidrial", 
+                    Acronym="SID", 
+                    FlagURL="~/Content/Images/SID.jpg",
+                    AwayFleet=@"<table>
+                        <thead><tr><th>Name</th><th>Type</th><th>Point value</th><th>Squadron sizes</th></tr></thead>
+                        <tbody>
+                        <tr><td>1x Diophantus (Assault Carrier) </td><td> Nav. Massive </td><td> 200 </td><td> 1/1</td></tr>
+                        <tr><td>1x Callimachus-Alpha (Time Orb) </td><td> Arm. Large </td><td> 90 </td><td> 1/1   </td></tr>
+                        <tr><td>1x Callimachus-Beta (Battle Orb) </td><td> Arm. Large </td><td> 85 </td><td> 1/1  </td></tr>
+                        <tr><td>1x Aristotle (Battleship) </td><td> Nav. Large </td><td> 200 </td><td> 1/1        </td></tr>
+                        <tr><td>1x Hippasus (Battle Cruiser) </td><td> Nav. Medium </td><td> 120 </td><td> 1/1    </td></tr>
+                        <tr><td>2x Fresnel (Gunship) </td><td> Nav. Medium </td><td> 180 </td><td> 1/2            </td></tr>
+                        <tr><td>1x Fresnel (Gunship) </td><td> Nav. Medium </td><td> 90 </td><td> 1/2             </td></tr>
+                        <tr><td>3x Zeno (Armoured Cruiser) </td><td> Nav. Medium </td><td> 270 </td><td> 1/3      </td></tr>
+                        <tr><td>3x Cleomedes (Cruiser) </td><td> Nav. Medium </td><td> 240 </td><td> 2/3          </td></tr>
+                        <tr><td>3x Plutarch (Heavy Destroyer) </td><td> Nav. Small </td><td> 135 </td><td> 2/3    </td></tr>
+                        <tr><td>2x Plutarch (Heavy Destroyer) </td><td> Nav. Small </td><td> 90 </td><td> 2/3     </td></tr>
+                        <tr><td>4x Diogenes (Frigate) </td><td> Nav. Small </td><td> 100 </td><td> 2/4            </td></tr>
+                        <tr><td>5x Thales (Corvette) </td><td> Nav. Small </td><td> 100 </td><td> 2/5             </td></tr>
+                        <tr><td>5x Thales (Corvette) </td><td> Nav. Small </td><td> 100 </td><td> 2/5             </td></tr>
+                        </tbody>
+                    </table>",
+                    HomeFleet=@"<table>
+                        <thead><tr><th>Name</th><th>Type</th><th>Point value</th><th>Squadron sizes</th></tr></thead>
+                        <tbody>
+                         <tr><td>1x Prometheus (Dreadnought) </td><td> Nav. Massive </td><td> 320 </td><td> 1/1         </td></tr>
+                         <tr><td>1x Pericles (Fleet Carrier) </td><td> Nav. Massive </td><td> 165 </td><td> 1/1         </td></tr>    
+                         <tr><td>1x Epicurus (Sky Fortress) </td><td> Aer. Massive </td><td> 170 </td><td> 1/1          </td></tr>
+                         <tr><td>1x Aristotle (Battleship) </td><td> Nav. Large </td><td> 200 </td><td> 1/1             </td></tr>
+                         <tr><td>1x Callimachus-Beta (Battle Orb) </td><td> Arm. Large </td><td> 85 </td><td> 1/1       </td></tr>
+                         <tr><td>1x Callimachus-Alpha (Time Orb) </td><td> Arm. Large </td><td> 90 </td><td> 1/1        </td></tr>
+                         <tr><td>1x Hippasus (Battle Cruiser) </td><td> Nav. Medium </td><td> 120 </td><td> 1/1         </td></tr>
+                         <tr><td>2x Fresnel (Gunship) </td><td> Nav. Medium </td><td> 180 </td><td> 1/2                 </td></tr>
+                         <tr><td>1x Fresnel (Gunship) </td><td> Nav. Medium </td><td> 90 </td><td> 1/2                  </td></tr>
+                         <tr><td>3x Zeno (Armoured Cruiser) </td><td> Nav. Medium </td><td> 270 </td><td> 1/3           </td></tr>
+                         <tr><td>4x Diogenes (Frigate) </td><td> Nav. Small </td><td> 100 </td><td> 2/4                 </td></tr>
+                         <tr><td>3x Plutarch (Heavy Destroyer) </td><td> Nav. Small </td><td> 135 </td><td> 2/3         </td></tr>
+                         <tr><td>3x Galen (Escort) </td><td> Nav. Small </td><td> 75 </td><td> 1/3                      </td></tr>                        </tbody>
+                    </table>",
+                },
+                new Faction{
+                    Name="Covenant of Antarctica 11th War Fleet 'Novalis's Mercy'",
+                    Acronym="COA", 
+                    FlagURL="~/Content/Images/COA.jpg",
+                    AwayFleet="",
+                    HomeFleet=""
+                },
                 new Faction{
                     Name="Republique of France", 
                     Acronym="RoF", 
                     FlagURL="~/Content/Images/ROF.jpg",
-                    AwayFleet=
-                        @"<table>
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Point value</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Diophantus Assault Carrier</td>
-                                    <td>200</td>
-                                </tr>
-                                <tr>
-                                    <td>Aristotle Battleship + Energy & Disruption</td>
-                                    <td>205</td>
-                                </tr>
-                                <tr>
-                                    <td>Euclid Sky Dreadnought + Target Painter & Combat Coordinator</td>
-                                    <td>305</td>
-                                </tr>
-                                <tr>
-                                    <td>Callimachus Alpha Time Orb</td>
-                                    <td>90</td>
-                                </tr>
-                                <tr>
-                                    <td>Callimachus Beta Battle Orb</td>
-                                    <td>85</td>
-                                </tr>
-                                <tr>
-                                    <td>Diophantus Assault Carrier</td>
-                                    <td>200</td>
-                                </tr>
-                                <tr>
-                                    <td>Hippasus Battle Cruiser + Energy</td>
-                                    <td>130</td>
-                                </tr>
-                                <tr>
-                                    <td>Cleomedes Cruiser 3x + Energy</td>
-                                    <td>240</td>
-                                </tr>
-                                <tr>
-                                    <td>Zeno Armoured Cruisers 3x </td>
-                                    <td>270</td>
-                                </tr>
-                                <tr>
-                                    <td>Icarus Medium Flyer + Energy 2x</td>
-                                    <td>160</td>
-                                </tr>
-                                <tr>
-                                    <td>Ptolemy Mine-Layer Flyers 2x</td>
-                                    <td>120</td>
-                                </tr>
-                                <tr>
-                                    <td>Diogenes Frigates 4x</td>
-                                    <td>120</td>
-                                </tr>
-                                <tr>
-                                    <td>Thales Corvettes 5x</td>
-                                    <td>100</td>
-                                </tr>
-                                <tr>
-                                    <td>Plutarch Heavy Destroyer 3x</td>
-                                    <td>135</td>
-                                </tr>
-                                <tr>
-                                    <td>Galen Escorts 1x</td>
-                                    <td>25</td>
-                                </tr>
-                                <tr>
-                                    <td>Alea Escort Flyers 2x</td>
-                                    <td>60</td>
-                                </tr>
-                            </tbody>
-                        </table>",
+                    AwayFleet="",
                     HomeFleet=""
                 },
                 new Faction{Name="Neutral", Acronym="-", FlagURL="", AwayFleet="", HomeFleet=""}

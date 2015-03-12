@@ -4,6 +4,7 @@
     ViewBag.Title = "Index";
 }
 
+
 <h2>Index</h2>
 
 <p>
@@ -25,7 +26,9 @@
         </th>
     </tr>
 
+
 @foreach (var item in Model) {
+
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Name)
@@ -34,12 +37,15 @@
             @Html.DisplayFor(modelItem => item.Acronym)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.HomeFleet)
+            @Html.Raw(item.HomeFleet)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.AwayFleet)
+            @Html.Raw(item.AwayFleet) 
         </td>
     </tr>
 }
 
+
 </table>
+
+
