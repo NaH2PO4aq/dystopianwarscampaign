@@ -52,7 +52,7 @@ namespace DystopianWarsCampaign.Migrations
                     Acronym="FSA", 
                     FlagURL="~/Content/Images/FSA.jpg", 
                     AwayFleet=@"<table>
-                        <thead><tr><th>Name</th><th>Type</th><th>Point value</th></tr></thead>
+                        <thead><tr><th>Name</th><th>Type</th><th>Points</th><th>Upgrades</th></tr></thead>
                         <tbody>
                         <tr><td>1x Savannah (Sky Fortress) </td><td> Aer. Massive </td><td> 165    </td></tr>
                         <tr><td>1x Valley (Airship) </td><td> Aer. Large </td><td> 150           </td></tr>
@@ -69,7 +69,7 @@ namespace DystopianWarsCampaign.Migrations
                         </tbody>
                     </table>",
                     HomeFleet=@"<table>
-                        <thead><tr><th>Name</th><th>Type</th><th>Point value</th></tr></thead>
+                        <thead><tr><th>Name</th><th>Type</th><th>Points</th><th>Upgrades</th></tr></thead>
                         <tbody>
                         <tr><td>1x Savannah (Sky Fortress) </td><td> Aer. Massive </td><td> 165         </td></tr>
                         <tr><td>1x Valley (Airship) </td><td> Aer. Large </td><td> 150                  </td></tr>
@@ -93,7 +93,7 @@ namespace DystopianWarsCampaign.Migrations
                     Acronym="PE",
                     FlagURL="~/Content/Images/PE.jpg",
                     AwayFleet=@"<table>
-                        <thead><tr><th>Name</th><th>Type</th><th>Point value</th></tr></thead>
+                        <thead><tr><th>Name</th><th>Type</th><th>Points</th><th>Upgrades</th></tr></thead>
                         <tbody>
                         <tr><td>1x Elbe (Fleet Carrier) </td><td> Nav. Massive </td><td> 210        </td></tr>    
                         <tr><td>1x Imperium (Sky Fortress) </td><td> Aer. Massive </td><td> 145     </td></tr>
@@ -110,11 +110,11 @@ namespace DystopianWarsCampaign.Migrations
                         </tbody>
                     </table>",
                     HomeFleet=@"<table>
-                        <thead><tr><th>Name</th><th>Type</th><th>Point value</th></tr></thead>
+                        <thead><tr><th>Name</th><th>Type</th><th>Points</th><th>Upgrades</th></tr></thead>
                         <tbody>
                         <tr><td>1x Blücher (Dreadnought) </td><td> Nav. Massive </td><td> 290                           </td></tr>
                         <tr><td>1x Imperium (Sky Fortress) </td><td> Aer. Massive </td><td> 145                         </td></tr>
-                        <tr><td>1x Kaiser Karl (Heavy Battleship) + Crew Type: Elite </td><td> Nav. Large </td><td> 235 </td></tr>
+                        <tr><td>1x Kaiser Karl (Heavy Battleship) </td><td> Nav. Large </td><td> 235 </td><td> Elite Crew</td></tr>
                         <tr><td>1x Sturmbringer (Submarine) </td><td> Nav. Large </td><td> 155                          </td></tr>
                         <tr><td>3x Donnerfaust (Support Cruiser) </td><td> Nav. Medium </td><td> 255                    </td></tr>
                         <tr><td>3x Geier (Bomber) </td><td> Aer. Medium </td><td> 180                                   </td></tr>
@@ -133,17 +133,17 @@ namespace DystopianWarsCampaign.Migrations
                     Acronym="SID", 
                     FlagURL="~/Content/Images/SID.jpg",
                     AwayFleet=@"<table>
-                        <thead><tr><th>Name</th><th>Type</th><th>Point value</th></tr></thead>
+                        <thead><tr><th>Name</th><th>Type</th><th>Points</th><th>Upgrades</th></tr></thead>
                         <tbody>
                         <tr><td>1x Diophantus (Assault Carrier) </td><td> Nav. Massive </td><td> 200</td></tr>
                         <tr><td>1x Callimachus-Alpha (Time Orb) </td><td> Arm. Large </td><td> 90   </td></tr>
                         <tr><td>1x Callimachus-Beta (Battle Orb) </td><td> Arm. Large </td><td> 85 </td></tr>
-                        <tr><td>1x Aristotle (Battleship) </td><td> Nav. Large </td><td> 200       </td></tr>
-                        <tr><td>1x Hippasus (Battle Cruiser) </td><td> Nav. Medium </td><td> 120   </td></tr>
+                        <tr><td>1x Aristotle (Battleship) </td><td> Nav. Large </td><td> 200 </td><td> Energy Turrets      </td></tr>
+                        <tr><td>1x Hippasus (Battle Cruiser) </td><td> Nav. Medium </td><td> 130</td><td> Energy Turrets   </td></tr>
                         <tr><td>2x Fresnel (Gunship) </td><td> Nav. Medium </td><td> 180             </td></tr>
                         <tr><td>1x Fresnel (Gunship) </td><td> Nav. Medium </td><td> 90            </td></tr>
                         <tr><td>3x Zeno (Armoured Cruiser) </td><td> Nav. Medium </td><td> 270      </td></tr>
-                        <tr><td>3x Cleomedes (Cruiser) </td><td> Nav. Medium </td><td> 240         </td></tr>
+                        <tr><td>3x Cleomedes (Cruiser) </td><td> Nav. Medium </td><td> 240</td><td> Energy Turrets </td></tr>
                         <tr><td>3x Plutarch (Heavy Destroyer) </td><td> Nav. Small </td><td> 135    </td></tr>
                         <tr><td>2x Plutarch (Heavy Destroyer) </td><td> Nav. Small </td><td> 90     </td></tr>
                         <tr><td>4x Diogenes (Frigate) </td><td> Nav. Small </td><td> 100           </td></tr>
@@ -152,23 +152,23 @@ namespace DystopianWarsCampaign.Migrations
                         </tbody>
                     </table>",
                     HomeFleet=@"<table>
-                        <thead><tr><th>Name</th><th>Type</th><th>Point value</th></tr></thead>
+                        <thead><tr><th>Name</th><th>Type</th><th>Points</th><th>Upgrades</th></tr></thead>
                         <tbody>
-                         <tr><td>1x Prometheus (Dreadnought) </td><td> Nav. Massive </td><td> 320       </td></tr>
-                         <tr><td>1x Pericles (Fleet Carrier) </td><td> Nav. Massive </td><td> 165        </td></tr>    
-                         <tr><td>1x Epicurus (Sky Fortress) </td><td> Aer. Massive </td><td> 170         </td></tr>
-                         <tr><td>1x Aristotle (Battleship) </td><td> Nav. Large </td><td> 200         </td></tr>
+                         <tr><td>1x Prometheus (Dreadnought) </td><td> Nav. Massive </td><td> 340 </td><td> IG Shield       </td></tr>
+                         <tr><td>1x Pericles (Fleet Carrier) </td><td> Nav. Massive </td><td> 165  </td><td> Energy Turrets       </td></tr>    
+                         <tr><td>1x Epicurus (Sky Fortress) </td><td> Aer. Massive </td><td> 180    </td><td> Energy Turrets        </td></tr>
+                         <tr><td>1x Aristotle (Battleship) </td><td> Nav. Large </td><td> 200</td><td> Energy Turrets      </td></tr>
                          <tr><td>1x Callimachus-Beta (Battle Orb) </td><td> Arm. Large </td><td> 85       </td></tr>
                          <tr><td>1x Callimachus-Alpha (Time Orb) </td><td> Arm. Large </td><td> 90         </td></tr>
-                         <tr><td>1x Hippasus (Battle Cruiser) </td><td> Nav. Medium </td><td> 120          </td></tr>
+                         <tr><td>1x Hippasus (Battle Cruiser) </td><td> Nav. Medium </td><td> 130 </td><td> Energy Turrets  </td></tr>
                          <tr><td>2x Fresnel (Gunship) </td><td> Nav. Medium </td><td> 180             </td></tr>
                          <tr><td>1x Fresnel (Gunship) </td><td> Nav. Medium </td><td> 90                </td></tr>
                          <tr><td>3x Zeno (Armoured Cruiser) </td><td> Nav. Medium </td><td> 270         </td></tr>
                          <tr><td>4x Diogenes (Frigate) </td><td> Nav. Small </td><td> 100                </td></tr>
                          <tr><td>3x Plutarch (Heavy Destroyer) </td><td> Nav. Small </td><td> 135        </td></tr>
-                         <tr><td>3x Galen (Escort) </td><td> Nav. Small </td><td> 75                   </td></tr>
+                         <tr><td>2x Galen (Escort) </td><td> Nav. Small </td><td> 50                   </td></tr>
                         </tbody>
-                    </table>",
+                    </table>"
                 },
                 new Faction{
                     Name="Covenant of Antarctica 11th War Fleet 'Novalis's Mercy'",
@@ -181,8 +181,37 @@ namespace DystopianWarsCampaign.Migrations
                     Name="Republique of France", 
                     Acronym="RoF", 
                     FlagURL="~/Content/Images/ROF.jpg",
-                    AwayFleet="",
-                    HomeFleet=""
+                    AwayFleet=@"<table>
+                        <thead><tr><th>Name</th><th>Type</th><th>Points</th><th>Upgrades</th></tr></thead>
+                        <tbody>   
+                        <tr><td> 1x Charlemagne (Dreadnought) </td><td> Nav. Massive </td><td> 330 </td><td> IG Cloud & IG Tesla      </td></tr>
+                        <tr><td> 1x Couronne (Assault Carrier) </td><td> Nav. Massive </td><td> 175 </td><td> IG Cloud & Stoic Crew   </td></tr>
+                        <tr><td> 1x Saint-Malo (Heavy Battleship) </td><td> Nav. Large </td><td> 235 </td><td> IG Null & Elite Crew   </td></tr>
+                        <tr><td> 3x Écuyer (Support Cruiser) </td><td> Nav. Medium </td><td> 210                                      </td></tr>
+                        <tr><td> 1x Cherbourg (Battle Cruiser) </td><td> Nav. Medium </td><td> 120 </td><td> Stoic Crew               </td></tr>
+                        <tr><td> 1x Cherbourg (Battle Cruiser) </td><td> Nav. Medium </td><td> 120 </td><td> Stoic Crew               </td></tr>
+                        <tr><td> 1x Cherbourg (Battle Cruiser) </td><td> Nav. Medium </td><td> 120 </td><td> Stoic Crew               </td></tr>
+                        <tr><td> 3x Dieppe (Cruiser) </td><td> Nav. Medium </td><td> 240 </td><td> Aggresive Crew                     </td></tr>
+                        <tr><td> 2x Toulon (Armoured Cruiser) </td><td> Nav. Medium </td><td> 180 </td><td> Stoic Crew                </td></tr>
+                        <tr><td> 4x Chevalier (Heavy Destroyer) </td><td> Nav. Small </td><td> 160                                    </td></tr>
+                        <tr><td> 4x Lyon (Frigate) </td><td> Nav. Small </td><td> 100                                                 </td></tr>
+                        </tbody>
+                    </table>",
+                    HomeFleet=@"<table>
+                        <thead><tr><th>Name</th><th>Type</th><th>Points</th><th>Upgrades</th></tr></thead>
+                        <tbody>                    
+                        <tr><td> 1x Charlemagne (Dreadnought) </td><td> Nav. Massive </td><td> 330 </td><td> IG Cloud & IG Tesla                            </td></tr>
+                        <tr><td> 1x Vauban (Surface Skimming Dreadnought) </td><td> Nav. Massive </td><td> 320 </td><td> IG Cloud                           </td></tr>
+                        <tr><td> 1x Couronne (Assault Carrier) </td><td> Nav. Massive </td><td> 175 </td><td> IG Cloud & Stoic Crew                         </td></tr>
+                        <tr><td> 1x La Rochelle (Heavy Skimming Battleship) </td><td> Nav. Large </td><td> 245 </td><td> IG Cloud & IG Null & Stoic Crew    </td></tr>
+                        <tr><td> 3x Écuyer (Support Cruiser) </td><td> Nav. Medium </td><td> 210                                                            </td></tr>
+                        <tr><td> 1x Cherbourg (Battle Cruiser) </td><td> Nav. Medium </td><td> 120 </td><td> Stoic Crew                                     </td></tr>
+                        <tr><td> 3x Marseille (Light Cruiser) </td><td> Nav. Medium </td><td> 180                                                           </td></tr>
+                        <tr><td> 4x Alma (Reconnaissance Frigate) </td><td> Nav. Small </td><td> 120                                                        </td></tr>
+                        <tr><td> 4x Chevalier (Heavy Destroyer) </td><td> Nav. Small </td><td> 160                                                          </td></tr>
+                        <tr><td> 5x Requin (Corvette) </td><td> Nav. Small </td><td> 100                                                                    </td></tr>
+                          </tbody>
+                    </table>"
                 },
                 new Faction{Name="Neutral", Acronym="-", FlagURL="", AwayFleet="", HomeFleet=""}
             };

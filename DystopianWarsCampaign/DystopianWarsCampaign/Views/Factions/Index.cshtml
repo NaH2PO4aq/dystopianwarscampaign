@@ -38,22 +38,44 @@
                 @Html.DisplayFor(modelItem => item.Acronym)
             </td>
             <td>
-                @Html.Raw(item.HomeFleet)
+               @* @Html.Raw(item.HomeFleet)*@
             </td>
             <td>
-                @Html.Raw(item.AwayFleet)
+                @*@Html.Raw(item.AwayFleet)*@
             </td>
         </tr>
     }
 </table>
-@*<h2>Lists</h2>
+<h2>Lists</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Acronym)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomeFleet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AwayFleet)
+        </th>
+    </tr>
+
 @foreach (var item in Model)
 {
-    <p>
+    <tr>
+        <td>      
+            @Html.DisplayFor(modelItem => item.Acronym)
+        </td>
+    
+    <td>
         @Html.Raw(item.HomeFleet)
-    </p>
-    <p>
+    </td>
+    <td>
         @Html.Raw(item.AwayFleet)
-    </p>
+    </td>
+        </tr>
 
-}*@
+
+}
+    </table>
