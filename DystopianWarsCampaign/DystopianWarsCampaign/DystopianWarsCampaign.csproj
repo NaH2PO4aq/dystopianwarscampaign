@@ -189,6 +189,7 @@
     <Compile Include="Controllers\Admin\TerritoriesController.cs" />
     <Compile Include="Controllers\Admin\TerritoryBonusController.cs" />
     <Compile Include="Controllers\Admin\TerritoryUpgradesController.cs" />
+    <Compile Include="Controllers\Admin\UsersController.cs" />
     <Compile Include="Controllers\FactionsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -235,6 +236,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\UserViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -1129,6 +1131,8 @@
     <Content Include="Views\Summary\Faction.cshtml" />
     <Content Include="Views\Map\SelectTerritory.cshtml" />
     <Content Include="Scripts\version.json" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Factions.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

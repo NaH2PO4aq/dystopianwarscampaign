@@ -1,0 +1,7 @@
+﻿@using DystopianWarsCampaign.ViewModels
+@using DystopianWarsCampaign.Models
+@model UserViewModel
+
+<div class="editor-field">
+    @Html.DropDownListFor(f => f.Factions, Model.selectList)
+</div>

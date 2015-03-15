@@ -16,6 +16,8 @@ namespace DystopianWarsCampaign.Models
             // Add custom user claims here
             return userIdentity;
         }
+
+        public Faction AssociatedFaction;
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

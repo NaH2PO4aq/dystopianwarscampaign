@@ -15,6 +15,7 @@ namespace DystopianWarsCampaign.Controllers.Admin
         private DystopianCampaignContext db = new DystopianCampaignContext();
 
         // GET: Territories
+
         public ActionResult Index()
         {
             return View(db.Territories.ToList());

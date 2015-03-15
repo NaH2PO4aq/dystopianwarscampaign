@@ -1,0 +1,44 @@
+﻿@using DystopianWarsCampaign.Models
+@using DystopianWarsCampaign.ViewModels
+
+@model UserViewModel
+@{
+    ViewBag.Title = "Index";
+    ViewBag.Factions = new List<SelectListItem>();
+    foreach(var factions in Model.Factions)
+    {
+        SelectListItem item = new SelectListItem();
+        item.Text = factions.Name;
+        item.Value = factions.Name;
+        ViewBag.Factions.Add(item);
+    }
+}
+
+<h2>Index</h2>
+<table class="table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>User</th>
+            <th>Email</th>
+            <th>Faction</th>
+        </tr>
+    </thead>
+
+    @foreach (var user in Model.Users)
+    {
+        <tr>
+            <td>@user.UserName</td>
+            <td>@user.Email</td>
+            <td>@Html.DropDownList("Factions")</td>
+        </tr>
+    }
+</table>
+
+<p>
+    <ul>
+        @foreach (var faction in Model.Factions)
+        {
+            <li>@faction.Name</li>
+        }
+    </ul>
+</p>
