@@ -195,31 +195,31 @@ namespace DystopianWarsCampaign.Migrations
                     Acronym="RoF", 
                     FlagURL="~/Content/Images/ROF.jpg",
                     AwayFleet=@"<table>
-                        <thead><tr><th>Name</th><th>Type</th><th>Points</th><th>Upgrades</th></tr></thead>
+                        <thead><tr><th>Name</th><th>Type</th><th>Points</th></tr></thead>
                         <tbody>   
-                        <tr><td> 1x Charlemagne (Dreadnought) </td><td> Nav. Massive </td><td> 330 </td><td> IG Cloud & IG Tesla      </td></tr>
-                        <tr><td> 1x Couronne (Assault Carrier) </td><td> Nav. Massive </td><td> 175 </td><td> IG Cloud & Stoic Crew   </td></tr>
-                        <tr><td> 1x Saint-Malo (Heavy Battleship) </td><td> Nav. Large </td><td> 235 </td><td> IG Null & Elite Crew   </td></tr>
+                        <tr><td> 1x Charlemagne (Dreadnought) </td><td> Nav. Massive </td><td> 330     </td></tr>
+                        <tr><td> 1x Couronne (Assault Carrier) </td><td> Nav. Massive </td><td> 175  </td></tr>
+                        <tr><td> 1x Saint-Malo (Heavy Battleship) </td><td> Nav. Large </td><td> 235    </td></tr>
                         <tr><td> 3x Écuyer (Support Cruiser) </td><td> Nav. Medium </td><td> 210                                      </td></tr>
-                        <tr><td> 1x Cherbourg (Battle Cruiser) </td><td> Nav. Medium </td><td> 120 </td><td> Stoic Crew               </td></tr>
-                        <tr><td> 1x Cherbourg (Battle Cruiser) </td><td> Nav. Medium </td><td> 120 </td><td> Stoic Crew               </td></tr>
-                        <tr><td> 1x Cherbourg (Battle Cruiser) </td><td> Nav. Medium </td><td> 120 </td><td> Stoic Crew               </td></tr>
-                        <tr><td> 3x Dieppe (Cruiser) </td><td> Nav. Medium </td><td> 240 </td><td> Aggresive Crew                     </td></tr>
-                        <tr><td> 2x Toulon (Armoured Cruiser) </td><td> Nav. Medium </td><td> 180 </td><td> Stoic Crew                </td></tr>
+                        <tr><td> 1x Cherbourg (Battle Cruiser) </td><td> Nav. Medium </td><td> 120             </td></tr>
+                        <tr><td> 1x Cherbourg (Battle Cruiser) </td><td> Nav. Medium </td><td> 120                </td></tr>
+                        <tr><td> 1x Cherbourg (Battle Cruiser) </td><td> Nav. Medium </td><td> 120              </td></tr>
+                        <tr><td> 3x Dieppe (Cruiser) </td><td> Nav. Medium </td><td> 240              </td></tr>
+                        <tr><td> 2x Toulon (Armoured Cruiser) </td><td> Nav. Medium </td><td> 180               </td></tr>
                         <tr><td> 4x Chevalier (Heavy Destroyer) </td><td> Nav. Small </td><td> 160                                    </td></tr>
                         <tr><td> 4x Lyon (Frigate) </td><td> Nav. Small </td><td> 100                                                 </td></tr>
                         <tr><td><b>TOTAL</b> </td><td> </td><td>  <b>  1990       </b></td></tr>
                         </tbody>
                     </table>",
                     HomeFleet=@"<table>
-                        <thead><tr><th>Name</th><th>Type</th><th>Points</th><th>Upgrades</th></tr></thead>
+                        <thead><tr><th>Name</th><th>Type</th><th>Points</th></tr></thead>
                         <tbody>                    
-                        <tr><td> 1x Charlemagne (Dreadnought) </td><td> Nav. Massive </td><td> 330 </td><td> IG Cloud & IG Tesla                            </td></tr>
-                        <tr><td> 1x Vauban (Surface Skimming Dreadnought) </td><td> Nav. Massive </td><td> 320 </td><td> IG Cloud                           </td></tr>
-                        <tr><td> 1x Couronne (Assault Carrier) </td><td> Nav. Massive </td><td> 175 </td><td> IG Cloud & Stoic Crew                         </td></tr>
-                        <tr><td> 1x La Rochelle (Heavy Skimming Battleship) </td><td> Nav. Large </td><td> 245 </td><td> IG Cloud & IG Null & Stoic Crew    </td></tr>
+                        <tr><td> 1x Charlemagne (Dreadnought) </td><td> Nav. Massive </td><td> 330                            </td></tr>
+                        <tr><td> 1x Vauban (Surface Skimming Dreadnought) </td><td> Nav. Massive </td><td> 320                        </td></tr>
+                        <tr><td> 1x Couronne (Assault Carrier) </td><td> Nav. Massive </td><td> 175                       </td></tr>
+                        <tr><td> 1x La Rochelle (Heavy Skimming Battleship) </td><td> Nav. Large </td><td> 245     </td></tr>
                         <tr><td> 3x Écuyer (Support Cruiser) </td><td> Nav. Medium </td><td> 210                                                            </td></tr>
-                        <tr><td> 1x Cherbourg (Battle Cruiser) </td><td> Nav. Medium </td><td> 120 </td><td> Stoic Crew                                     </td></tr>
+                        <tr><td> 1x Cherbourg (Battle Cruiser) </td><td> Nav. Medium </td><td> 120                          </td></tr>
                         <tr><td> 3x Marseille (Light Cruiser) </td><td> Nav. Medium </td><td> 180                                                           </td></tr>
                         <tr><td> 4x Alma (Reconnaissance Frigate) </td><td> Nav. Small </td><td> 120                                                        </td></tr>
                         <tr><td> 4x Chevalier (Heavy Destroyer) </td><td> Nav. Small </td><td> 160                                                          </td></tr>
