@@ -67,6 +67,7 @@ namespace DystopianWarsCampaign.Migrations
                         <tr><td>5x Avion (Strike Bomber) </td><td> Aer. Small </td><td> 150       </td></tr>
                         <tr><td>4x Guilford (Destroyer) </td><td> Nav. Small </td><td> 160       </td></tr>
                         <tr><td>5x Revere (Corvette) </td><td> Nav. Small </td><td> 100          </td></tr>
+                        <tr><td><b>TOTAL</b> </td><td> </td><td>  <b>  2155       </b></td></tr>
                         </tbody>
                     </table>",
                     HomeFleet=@"<table>
@@ -88,6 +89,7 @@ namespace DystopianWarsCampaign.Migrations
                         <tr><td>5x Avion (Strike Bomber) </td><td> Aer. Small </td><td> 150             </td></tr>
                         <tr><td>3x Guilford (Destroyer) </td><td> Nav. Small </td><td> 120              </td></tr>
                         <tr><td>3x Springfield (Escort) </td><td> Nav. Small </td><td> 60               </td></tr>
+                        <tr><td><b>TOTAL</b> </td><td> </td><td>  <b>  2490       </b></td></tr>
                         </tbody>
                     </table>"
                 },
@@ -110,6 +112,7 @@ namespace DystopianWarsCampaign.Migrations
                         <tr><td>4x Arminius (Frigate) </td><td> Nav. Small </td><td> 120            </td></tr>
                         <tr><td>5x Saxony (Corvette) </td><td> Nav. Small </td><td> 100             </td></tr>
                         <tr><td>5x Saxony (Corvette) </td><td> Nav. Small </td><td> 100             </td></tr>
+                        <tr><td><b>TOTAL</b> </td><td> </td><td>  <b>  2000       </b></td></tr>
                         </tbody>
                     </table>",
                     HomeFleet=@"<table>
@@ -129,6 +132,7 @@ namespace DystopianWarsCampaign.Migrations
                         <tr><td>5x Saxony (Corvette) </td><td> Nav. Small </td><td> 100                                 </td></tr>
                         <tr><td>4x Speerwurf (Strike Airship) </td><td> Aer. Small </td><td> 100                        </td></tr>
                         <tr><td>2x Arminius (Frigate) </td><td> Nav. Small </td><td> 60                                 </td></tr>
+                        <tr><td><b>TOTAL</b> </td><td> </td><td>  <b>  2255       </b></td></tr>
                         </tbody>
                     </table>"
                 },
@@ -156,6 +160,7 @@ namespace DystopianWarsCampaign.Migrations
                         <tr><td>5x Thales (Corvette) </td><td> Nav. Small </td><td> 100            </td></tr>
                         <tr><td>5x Thales (Corvette) </td><td> Nav. Small </td><td> 100             </td></tr>
                         <tr><td>1x Galen (Escort) </td><td> Nav. Small </td><td> 25                   </td></tr>
+                        <tr><td><b>TOTAL</b> </td><td> </td><td>  <b>  2500       </b></td></tr>
                         </tbody>
                     </table>",
                     HomeFleet=@"<table>
@@ -174,6 +179,7 @@ namespace DystopianWarsCampaign.Migrations
                          <tr><td>4x Diogenes (Frigate) </td><td> Nav. Small </td><td> 100                </td></tr>
                          <tr><td>3x Plutarch (Heavy Destroyer) </td><td> Nav. Small </td><td> 135        </td></tr>
                          <tr><td>2x Galen (Escort) </td><td> Nav. Small </td><td> 50                   </td></tr>
+                        <tr><td><b>TOTAL</b> </td><td> </td><td>  <b>  1995       </b></td></tr>
                         </tbody>
                     </table>"
                 },
@@ -202,6 +208,7 @@ namespace DystopianWarsCampaign.Migrations
                         <tr><td> 2x Toulon (Armoured Cruiser) </td><td> Nav. Medium </td><td> 180 </td><td> Stoic Crew                </td></tr>
                         <tr><td> 4x Chevalier (Heavy Destroyer) </td><td> Nav. Small </td><td> 160                                    </td></tr>
                         <tr><td> 4x Lyon (Frigate) </td><td> Nav. Small </td><td> 100                                                 </td></tr>
+                        <tr><td><b>TOTAL</b> </td><td> </td><td>  <b>  1990       </b></td></tr>
                         </tbody>
                     </table>",
                     HomeFleet=@"<table>
@@ -217,11 +224,14 @@ namespace DystopianWarsCampaign.Migrations
                         <tr><td> 4x Alma (Reconnaissance Frigate) </td><td> Nav. Small </td><td> 120                                                        </td></tr>
                         <tr><td> 4x Chevalier (Heavy Destroyer) </td><td> Nav. Small </td><td> 160                                                          </td></tr>
                         <tr><td> 5x Requin (Corvette) </td><td> Nav. Small </td><td> 100                                                                    </td></tr>
+                        <tr><td><b>TOTAL</b> </td><td> </td><td>  <b>  1960       </b></td></tr>
                           </tbody>
                     </table>"
                 },
                 new Faction{Name="Neutral", Acronym="-", FlagURL="", AwayFleet="", HomeFleet=""}
             };
+
+
             context.Factions.AddOrUpdate(fac => fac.Name, factions);
             context.SaveChanges();
 
