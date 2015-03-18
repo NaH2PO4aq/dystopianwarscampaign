@@ -15,6 +15,7 @@ namespace DystopianWarsCampaign.Migrations
             AutomaticMigrationsEnabled = false;
         }
 
+
         protected override void Seed(DystopianWarsCampaign.Models.DystopianCampaignContext context)
         {
             var territoryBonuses = new TerritoryBonus[]
@@ -54,20 +55,20 @@ namespace DystopianWarsCampaign.Migrations
                     AwayFleet=@"<table>
                         <thead><tr><th>Name</th><th>Type</th><th>Points</th></tr></thead>
                         <tbody>
-                        <tr><td>1x Savannah (Sky Fortress) </td><td> Aer. Massive </td><td> 165    </td></tr>
-                        <tr><td>1x Valley (Airship) </td><td> Aer. Large </td><td> 150           </td></tr>
-                        <tr><td>1x Boston (Attack Submarine) </td><td> Nav. Large </td><td> 145    </td></tr>
-                        <tr><td>1x Liberty (Heavy Battleship) </td><td> Nav. Large </td><td> 215 </td></tr>
-                        <tr><td>1x Annapolis (Battle Cruiser) </td><td> Nav. Medium </td><td> 115  </td></tr>                        
-                        <tr><td>1x Annapolis (Battle Cruiser) </td><td> Nav. Medium </td><td> 115  </td></tr>
-                        <tr><td>3x Georgetown MkII (Cruiser) </td><td> Nav. Medium </td><td> 210   </td></tr>
-                        <tr><td>3x Lee (Scoutship) </td><td> Aer. Medium </td><td> 240            </td></tr>
-                        <tr><td>3x Princeton (Gunship) </td><td> Nav. Medium </td><td> 270      </td></tr>
-                        <tr><td>4x Augusta (Frigate) </td><td> Nav. Small </td><td> 120        </td></tr>
-                        <tr><td>5x Avion (Strike Bomber) </td><td> Aer. Small </td><td> 150       </td></tr>
-                        <tr><td>4x Guilford (Destroyer) </td><td> Nav. Small </td><td> 160       </td></tr>
-                        <tr><td>5x Revere (Corvette) </td><td> Nav. Small </td><td> 100          </td></tr>
-                        <tr><td><b>TOTAL</b> </td><td> </td><td>  <b>  2155       </b></td></tr>
+                        <tr><td>1x Savannah (Sky Fortress) </td><td> Aer. Massive </td><td class=""inputtotal""> 165    </td></tr>
+                        <tr><td>1x Valley (Airship) </td><td> Aer. Large </td><td class=""inputtotal""> 150           </td></tr>
+                        <tr><td>1x Boston (Attack Submarine) </td><td> Nav. Large </td><td class=""inputtotal""> 145    </td></tr>
+                        <tr><td>1x Liberty (Heavy Battleship) </td><td> Nav. Large </td><td class=""inputtotal""> 215 </td></tr>
+                        <tr><td>1x Annapolis (Battle Cruiser) </td><td> Nav. Medium </td><td class=""inputtotal""> 115  </td></tr>                        
+                        <tr><td>1x Annapolis (Battle Cruiser) </td><td> Nav. Medium </td><td class=""inputtotal""> 115  </td></tr>
+                        <tr><td>3x Georgetown MkII (Cruiser) </td><td> Nav. Medium </td><td class=""inputtotal""> 210   </td></tr>
+                        <tr><td>3x Lee (Scoutship) </td><td> Aer. Medium </td><td class=""inputtotal""> 240            </td></tr>
+                        <tr><td>3x Princeton (Gunship) </td><td> Nav. Medium </td><td class=""inputtotal""> 270      </td></tr>
+                        <tr><td>4x Augusta (Frigate) </td><td> Nav. Small </td><td class=""inputtotal""> 120        </td></tr>
+                        <tr><td>5x Avion (Strike Bomber) </td><td> Aer. Small </td><td class=""inputtotal""> 150       </td></tr>
+                        <tr><td>4x Guilford (Destroyer) </td><td> Nav. Small </td><td class=""inputtotal""> 160       </td></tr>
+                        <tr><td>5x Revere (Corvette) </td><td> Nav. Small </td><td class=""inputtotal""> 100          </td></tr>
+                        <tr><td>                 </td><td>     TOTAL       </td><td class=""total"" />  </tr>
                         </tbody>
                     </table>",
                     HomeFleet=@"<table>
