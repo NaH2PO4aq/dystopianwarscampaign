@@ -22,6 +22,13 @@
      font-family: 'Introfont';
 }
 
+.textbox {
+    padding: 30px 15px;
+    margin-bottom: 30px;
+    color: inherit;
+    background-color: #eee;
+}
+
 /*.flags {
     -webkit-box-shadow: 3px 3px 3px #393939;
     box-shadow: 3px 3px 3px #393939;
