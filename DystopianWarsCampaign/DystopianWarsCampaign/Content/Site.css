@@ -1,14 +1,31 @@
 ﻿body {
     padding-top: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
+     background: url(Images/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height:100%;
+}
+
+.offsettop {
+    margin-top: 4em;
+}
+
+@font-face {
+    font-family: 'Introfont'; /*a name to be used later*/
+    src: url('/fonts/introfont.ttf'); /*URL to font*/
+}
+
+.introfont {
+     font-family: 'Introfont';
 }
 
 /*.flags {
     -webkit-box-shadow: 3px 3px 3px #393939;
     box-shadow: 3px 3px 3px #393939;
     }*/
-
-
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
