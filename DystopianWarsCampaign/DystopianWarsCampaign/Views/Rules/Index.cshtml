@@ -43,9 +43,9 @@
 <h2 id="CampaignTurn">Campaign Turn</h2>
 <ol>
     <li>Receive RP.</li>
+    <li>Manage fleets.</li>
     <li>Upgrade territories and declare attacks.</li>
     <li>Resolve conflicts.</li>
-    <li>Manage fleets.</li>
     <li>Resolve map updates.</li>
 </ol>
 <p>
@@ -54,6 +54,10 @@
 <h3>Receive RP</h3>
 <p>
     At the beginning of a campaign turn every player receives RP according to the territories owned modified by upgrades and bonuses. For instance, a player who owns four territories of which one is a capital and one is a town will receive 30 RP for territories, 30 RP for owning a capital territory and 10 RP for owning a town for a total of 70RP.
+</p>
+<h3>Manage Fleets</h3>
+<p>
+    After conflicts have been resolved, players may lick their wounds and spend RP to expedite repairs on their fleets. Destroyed vessels may be restored and new vessels may be purchased for use in <u>subsequent</u> turns.
 </p>
 <h3>Upgrade Territories and declare attacks</h3>
 <p>
@@ -64,10 +68,6 @@
     Once the declaration phase has ended, either the website or the website manager will notify all players if there are any conflicts to resolve. Included will be both offensive modifiers and defensive upgrades as well as an up-to-date Operational Theatre Map.
     <br /><strong>*Designer's note: This will be automated eventually.</strong>
 </p>
-<h3>Manage Fleets</h3>
-<p>
-    After conflicts have been resolved, players may lick their wounds and spend RP to expedite repairs on their fleets. Destroyed vessels may be restored and new vessels may be purchased for use in subsequent turns.
-</p>
 <h3>Resolve map updates</h3>
 <p>
     Once all previous phases have been resolved, the map is updated. Territories change owner if necessary and fortifications that were bought in the previous phases are built so that their effects can be felt in subsequent turns. Once all actions for this phase have been resolved, the turn finishes and the next turn may begin.
@@ -77,7 +77,7 @@
     By default a territory gives +10 RP per turn. A capital territory gives +30 RP per turn. A player starts with one capital territory and two normal territories, thus has 50 RP to spend in his first turn.
 </p>
 <h3 id="TerritoryUpgrades">Territory upgrades</h3>
-All territory upgrades must be represented by appropriate scenery and/or tokens. Each upgrade may be placed only once per territory. Unless noted otherwise, the upgrade must be marked on the Operational Theatre Map and must always start the game in the same location in so far as available scenery allows. Remember, it's better to have it look cool and make for exciting battles than to provide a teeny edge to one of the players!
+All territory upgrades must be represented by appropriate scenery and/or tokens. Place the upgrade as normal in the advanced deployment phase of a battle.
 <table class="table table-bordered table-striped table">
     <thead>
         <tr>
@@ -88,18 +88,18 @@ All territory upgrades must be represented by appropriate scenery and/or tokens.
     </thead>
     <tr>
         <td>Minefields</td>
-        <td>30</td>
+        <td>20</td>
         <td>Allows deployment of 5 AD5 mines. Mark their locations on the Operational Theatre Map. Faction-wide modifications to mines still apply (e.g. Covenant has High Payload AD4 mines, Prussian Empire has AD5 Lethal Strike mines). If there is any doubt concerning stats, take the stats as listed with the Universal Bunker Complex in the army list.</td>
     </tr>
     <tr>
         <td>Radar Array</td>
-        <td>30</td>
+        <td>20</td>
         <td>Allows re-rolls of ONE die for determining strategic/operational advantage in this and adjacent territories. Example: You roll 3 and 1 for advantage. You may re-roll the 1, resulting in a 4 and a resulting advantage roll of 7. See Operational Assets v1.3 page 5 for statistics.</td>
     </tr>
     <tr>
         <td>Airfield</td>
         <td>50</td>
-        <td>Allows local air support (up to 10 SAWs) in this and adjacent territories. See the entry for Forward Landing Field in each player's respective army list for statistics. Note that when fighting on the territory containing the Airfield the provided 10 SAWs stack with the Carrier value of the Forward Landing field!</td>
+        <td>Allows local air support (up to 10 SAWs) in this and adjacent territories, you can only apply the local air support in one territory per turn! See the entry for Forward Landing Field in each player's respective army list for statistics, with the change that all airfields use Carrier(9). Note that when fighting on the territory containing the Airfield the provided 10 SAWs can stack with the Carrier value of the Forward Landing field!</td>
     </tr>
     <tr>
         <td>Harbour</td>
@@ -113,8 +113,13 @@ All territory upgrades must be represented by appropriate scenery and/or tokens.
     </tr>
     <tr>
         <td>Bunker Complex</td>
-        <td>50</td>
+        <td>40</td>
         <td>Mark the bunker on the Operational Theatre Map. See the entry for Bunker Complex in each player's respective army list for statistics. Note that the Mines from the Bunker Complex stack with the Mines from the Minefield upgrade!</td>
+    </tr>
+        <tr>
+        <td>Drydock</td>
+        <td>40</td>
+        <td>A drydock is build in your capital and removes the 1 RP cost per squadron when building units and increases the automatically repaired hp per turn to 3.</td>
     </tr>
 </table>
 
@@ -212,7 +217,7 @@ Some territories provide inherent bonuses. If appropriate, these should be repre
     At the end of a battle ships may lie broken and battered. Mighty dreadnoughts are reduced to scrap metal. All damage to units and fortifications is done on a permanent basis. SAWs are replenished for free.
 </p>
 <p>
-    At the beginning of the repair step each ship automatically repairs 2 hull points. If a vessel has been completely destroyed/derelicted/prized an additional 1 RP must be paid to represent the effort of recovering the vessel. This means that most small vessels may be repaired free of charge. For each additional hull point to be repaired, 1 RP must be spend on a one-per-one basis.
+    At the beginning of a turn each ship automatically repairs 2 hull points (3 with a drydock). This means that most small vessels may be repaired free of charge. For each additional hull point to be repaired, 1 RP per 2 repaired HP (rounded up) must be spend. Remember that you can chose to not fully repair a unit, however if you use this unit in battle it will be damaged from the start.
 </p>
 <p>
     <strong>Example:</strong> A 3-strong squadron of Riever cruisers engages in an assault. At the end of the assault one of the Rievers is destroyed, one has taken three damage and one has taken one damage. At the beginning of the repair step 1 RP must be paid to recover the destroyed Riever. It recovers two hull points automatically, leaving two hull points to be repaired. The other Rievers also regenerate two hull points. One Riever (with two hull points of damage) is repaired to full, the other one (with three hull points of damage) has one point of damage left to repair. This costs one additional RP.
@@ -221,14 +226,21 @@ Some territories provide inherent bonuses. If appropriate, these should be repre
     In total this cruiser squadron has taken 4 + 3 + 2 = 9 hull points of damage. Of those, 2 + 2 + 2 = 6 hull points were repaired automatically. 3 hull points remaining cost 3 RP to repair and 1 additional RP is paid for the destroyed Riever, thus the player has to pay 4 RP to restore the Riever squad to full working order.
 </p>
 <p>
-    Note that if the player does not have sufficient RP, he or she may select which units are not repaired. These units enter their next battle damaged. In subsequent turns they repair two hull points automatically as normal.
+    Also note that the Home Fleet is allowed repairs between battles if you are attacked multiple times in one turn, you can go to negative RP with this. This extra repair chance only applies to damage taken in the current turn. This means that if I choose not to fully repair a unit from my home fleet its maximum HP for that turn is reduced. Also note that the "free" 2 HP repair only applies at the start of the next turn. 
+</p>
+<p>
+    <strong>Example:</strong> A Liberty and Savannah from the Home Fleet are destroyed in a battle. The player chooses to fully repair the Liberty but does not repair the Savannah. This means that the maximum HP of the Savannah is 2 for the whole turn. This player is then attacked 2 times. In the first battle the Liberty takes 5 damage, the player also wants to use the Liberty for the second battle and repairs it to full, paying 3 RP. The Liberty then takes 6 damage. At the end of the turn the Liberty has 3 HP remaining. 
 </p>
 <p>
     If a fortification is destroyed, it may not be repaired. Instead the owning player must repurchase the territory upgrade. If the fortification is merely damaged, RP must be spend to repair it as normal.
 </p>
 <h3>Expanding the fleet lists</h3>
 <p>
-    As the campaign progresses, players may find that they are in need of more units for their fleets. New units may be bought during the fleet management phase. Each new <strong>squadron</strong> costs 1 RP + 1 RP per hull point. For example, an Aristotle-class battleship with 8 hull points would cost 8 + 1 = 9 RP. When bought the unit is added to a fleet and may be used from the next turn onwards.
+    As the campaign progresses, players may find that they are in need of more units for their fleets. New units may be bought during the fleet management phase. Each new <strong>squadron</strong> costs 1 RP + 1 RP per hull point. For example, a Requin corvette squadron has 5 units with 2 hullpoints each. To build a full squadron this would cost 5 * 2 + 1 = 11 RP. When bought the unit is added to a fleet and may be used from the next turn onwards.
+</p>
+<h3>Adding Allied units</h3>
+<p>
+    A player may also wish to add allied units to his force. These units go into a seperate list, the Ally list. The units in this can be used for the Home and Assault fleet, however not both at the same time. The units are build and repaired the same as with normal units. Also the normal ally rules from the Dystopian Wars rulebook apply when using allies in a battle. 
 </p>
 <h2 id="AttackBonuses">Attack Bonuses</h2>
 <p>
@@ -253,13 +265,13 @@ Some territories provide inherent bonuses. If appropriate, these should be repre
         </tr>
         <tr>
             <td>Surprise Attack</td>
-            <td>50</td>
-            <td>At least 200 points of the defending player's units must be placed in Reserve. Unlike normal, these units may be massive, large, medium or small. Fortifications may not be placed in reserve.</td>
+            <td>100% of attack cost</td>
+            <td>At least 10% of the points of the defending player's units must be placed in Reserve. Unlike normal, these units may be massive, large, medium or small. Fortifications may not be placed in reserve.</td>
         </tr>
         <tr>
             <td>All Out Assault</td>
-            <td>50</td>
-            <td>You gain 200 points to spend on additional units for this battle only.</td>
+            <td>100% of attack cost</td>
+            <td>You gain 10% additional points to spend on units for this battle only.</td>
         </tr>
     </table>
 </p>
@@ -302,6 +314,18 @@ Some territories provide inherent bonuses. If appropriate, these should be repre
 </p>
 <h2 id="Changelog">Changelog</h2>
 <p>
+    25-03-2015: Added missing rules
+    <ul>
+        <li>RP cost of mines and radar from 30 to 20</li>
+        <li>Rp cost of bunker from 50 to 40</li>
+        <li>Added drydock</li>
+        <li>Removed fixed location of upgrades on the tactical map</li>
+        <li>Local air support from an airfield only applies to one area per turn</li>
+        <li>Changed turn order, manage fleet is now at the start of a turn</li>
+        <li>Updated repair rules, added extra home fleet repairs in a turn</li>
+        <li>Changed attack bonusses to be percentage based</li>
+        <li>Added Ally list and rules</li>
+    </ul>
     09-02-2015: Added missing rules
     <ul>
         <li>Added rules for repairs</li>
