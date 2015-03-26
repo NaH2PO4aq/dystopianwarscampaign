@@ -77,7 +77,7 @@
     By default a territory gives +10 RP per turn. A capital territory gives +30 RP per turn. A player starts with one capital territory and two normal territories, thus has 50 RP to spend in his first turn.
 </p>
 <h3 id="TerritoryUpgrades">Territory upgrades</h3>
-All territory upgrades must be represented by appropriate scenery and/or tokens. Place the upgrade as normal in the advanced deployment phase of a battle.
+All territory upgrades must be represented by appropriate scenery and/or tokens. Place the upgrade as normal in the advanced deployment phase of a battle. If a territory with an upgrade under construction is captured 25% (rounded up) of the initial RP cost is refunded.
 <table class="table table-bordered table-striped table">
     <thead>
         <tr>
@@ -88,8 +88,8 @@ All territory upgrades must be represented by appropriate scenery and/or tokens.
     </thead>
     <tr>
         <td>Minefields</td>
-        <td>20</td>
-        <td>Allows deployment of 5 AD5 mines. Mark their locations on the Operational Theatre Map. Faction-wide modifications to mines still apply (e.g. Covenant has High Payload AD4 mines, Prussian Empire has AD5 Lethal Strike mines). If there is any doubt concerning stats, take the stats as listed with the Universal Bunker Complex in the army list.</td>
+        <td>10</td>
+        <td>Allows deployment of 5 AD5 mines. Destroyed/detonated mines regen after each turn. Faction-wide modifications to mines still apply (e.g. Covenant has High Payload AD4 mines, Prussian Empire has AD5 Lethal Strike mines). If there is any doubt concerning stats, take the stats as listed with the Universal Bunker Complex in the army list.</td>
     </tr>
     <tr>
         <td>Radar Array</td>
@@ -226,13 +226,13 @@ Some territories provide inherent bonuses. If appropriate, these should be repre
     In total this cruiser squadron has taken 4 + 3 + 2 = 9 hull points of damage. Of those, 2 + 2 + 2 = 6 hull points were repaired automatically. 3 hull points remaining cost 3 RP to repair and 1 additional RP is paid for the destroyed Riever, thus the player has to pay 4 RP to restore the Riever squad to full working order.
 </p>
 <p>
-    Also note that the Home Fleet is allowed repairs between battles if you are attacked multiple times in one turn, you can go to negative RP with this. This extra repair chance only applies to damage taken in the current turn. This means that if I choose not to fully repair a unit from my home fleet its maximum HP for that turn is reduced. Also note that the "free" 2 HP repair only applies at the start of the next turn. 
+    Also note that the Home Fleet is allowed repairs between battles if you are attacked multiple times in one turn. This can cause you to have negative RP. This extra repair chance only applies to damage taken in the current turn and you pay 1 RP per 1 HP when doing this, reflecting crews working over time to get the ship fixed. This means that if I choose not to fully repair a unit from my home fleet its maximum HP for that turn is reduced. Also note that the "free" 2 HP repair only applies at the start of the next turn. 
 </p>
 <p>
-    <strong>Example:</strong> A Liberty and Savannah from the Home Fleet are destroyed in a battle. The player chooses to fully repair the Liberty but does not repair the Savannah. This means that the maximum HP of the Savannah is 2 for the whole turn. This player is then attacked 2 times. In the first battle the Liberty takes 5 damage, the player also wants to use the Liberty for the second battle and repairs it to full, paying 3 RP. The Liberty then takes 6 damage. At the end of the turn the Liberty has 3 HP remaining. 
+    <strong>Example:</strong> A Liberty and Savannah from the Home Fleet are destroyed in a battle. The player chooses to fully repair the Liberty but does not repair the Savannah. This means that the maximum HP of the Savannah is 2 for the whole turn. This player is then attacked 2 times. In the first battle the Liberty takes 5 damage, the player also wants to use the Liberty for the second battle and repairs it to full, paying 5 RP. The Liberty then takes 6 damage. At the end of the turn the Liberty has 3 HP remaining. 
 </p>
 <p>
-    If a fortification is destroyed, it may not be repaired. Instead the owning player must repurchase the territory upgrade. If the fortification is merely damaged, RP must be spend to repair it as normal.
+    If a fortification is destroyed, it may not be repaired. Instead the owning player must pay 50% of the territory upgrade to rebuild the upgrade (mines excluded). If the fortification is merely damaged, RP must be spend to repair it as normal.
 </p>
 <h3>Expanding the fleet lists</h3>
 <p>
@@ -314,7 +314,15 @@ Some territories provide inherent bonuses. If appropriate, these should be repre
 </p>
 <h2 id="Changelog">Changelog</h2>
 <p>
-    25-03-2015: Added missing rules
+    26-03-2015: More tweaks
+    <ul>
+        <li>RP cost of mines 20 to 10</li>
+        <li>Mines regen after each turn</li>
+        <li>Changed cost of in-turn repairing of the home fleet, now 1 RP per HP</li> 
+        <li>Changed cost of rebuilding a destroyed upgrade, 100% to 50% of initial cost</li>
+        <li>Added 25% refund when a territory with an under construction upgrade is captured<\li>
+    </ul>
+    25-03-2015: Rule tweaks
     <ul>
         <li>RP cost of mines and radar from 30 to 20</li>
         <li>Rp cost of bunker from 50 to 40</li>
