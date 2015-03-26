@@ -5,14 +5,18 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
+
 namespace DystopianWarsCampaign.Controllers
 {
     public class HomeController : Controller
     {
+        private DystopianCampaignContext db = new DystopianCampaignContext();
+
         public ActionResult Index()
         {
-            //Comment added.
-            return View();
+            var News = db.News.ToList();
+            return View(News);
         }
 
         public ActionResult About()

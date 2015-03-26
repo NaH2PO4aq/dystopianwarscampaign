@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<DystopianWarsCampaign.Models.News>
+@{
     ViewBag.Title = "Home Page";
 }
 @section Scripts {
@@ -22,35 +23,16 @@ if not hundreds, of lesser skirmishes.</>
       <hr />
   </div></div></div> 
 
-
 <div class="row">
-    <div class="col-md-4">
-        <div class="jumbotron">
-        <h4>Updated campaign site!</h4>
-        <h5><i>24/03/15</i></h5>
-             <hr />
-        <h5>
-            Throughout the last couple of weeks, we've done some minor updates to our campaign website. Now we've got a new layout, which is far from pretty, and therefore still in beta. More interestingly, the map is fully up to date for round three. 
-        </h5><h5>    
-            In addition, full fleet-lists of each faction have been published and can be found @Html.ActionLink("here", "Index", "Factions") 
-        </h5>
-        </div>  
-    </div>
-    <div class="col-md-4">
-         <div class="jumbotron">
-        <h4>End of round 3</h4>
-        <h5><i>20/03/15</i></h5>
-               <hr />
-        <h5>Battles have been hard fought and territories have been either gained or lost. Meanwhile, several armies have increased and upgrades have been built. </h5> <h5>It's time for round #4! Please submit your moves before the 28th of March!</h5>
-    </div></div>    
-    <div class="col-md-4">
-         <div class="jumbotron">
-        <h4>The Illustrated Naval Review</h4>
-        <h5><i>09/03/15</i></h5>
-               <hr />
-        <h5>The Illustrated Naval Review, read all about it!</h5>
-             <img src="~/Content/Images/Naval_review_1.jpg" class="img-thumbnail">
-
-        </div>  
-    </div>
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+            <div class="jumbotron">
+                <h4>@Html.Raw(item.Title)</h4>
+                <h5><i>@Html.Raw(item.Date)</i></h5>
+                <hr />
+                <h5>@Html.Raw(item.Content)</h5>
+            </div>
+        </div>
+    }
 </div>

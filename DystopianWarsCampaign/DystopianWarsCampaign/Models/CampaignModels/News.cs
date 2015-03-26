@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.ComponentModel.DataAnnotations;
+using System.Web;
+
 
 namespace DystopianWarsCampaign.Models
 {
@@ -12,5 +15,10 @@ namespace DystopianWarsCampaign.Models
         public string Title { get; set; }
         public string Content { get; set; }
         public DateTime Date { get; set; }
+
+        public News()
+        {
+
+        }
     }
 }

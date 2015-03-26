@@ -18,6 +18,15 @@ namespace DystopianWarsCampaign.Migrations
 
         protected override void Seed(DystopianWarsCampaign.Models.DystopianCampaignContext context)
         {
+            var News = new News[]
+            {
+                new News{Title="Updated campaign site!", Date=DateTime.Today, Content="Throughout the last couple of weeks, we've done some minor updates to our campaign website. Now we've got a new layout, which is far from pretty, and therefore still in beta. More interestingly, the map is fully up to date for round three. In addition, full fleet-lists of each faction have been published"},
+                new News{Title="End of round 3", Date=DateTime.Today, Content="Battles have been hard fought and territories have been either gained or lost. Meanwhile, several armies have increased and upgrades have been built. It's time for round #4! Please submit your moves before the 28th of March!"},
+                new News{Title="Naval Reviews", Date=DateTime.Today, Content=@"The Illustrated Naval Review, read all about it! <img src=""~/Content/Images/Naval_review_1.jpg"">"}
+            };
+            context.News.AddOrUpdate(tb => tb.Title, News);
+            context.SaveChanges();
+
             var territoryBonuses = new TerritoryBonus[]
             {
                 new TerritoryBonus{Name="Town", Description="+10 additional requisition per turn."},
