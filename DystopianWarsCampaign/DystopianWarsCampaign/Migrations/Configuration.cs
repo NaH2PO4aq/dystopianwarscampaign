@@ -45,7 +45,7 @@ namespace DystopianWarsCampaign.Migrations
             context.TerritoryUpgrades.AddOrUpdate(tu => tu.Name, territoryUpgrades);
             context.SaveChanges();
 
-            
+
             var factions = new Faction[]
             {
                 new Faction{

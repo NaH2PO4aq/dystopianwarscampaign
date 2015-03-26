@@ -219,6 +219,10 @@
     <Compile Include="Migrations\201502071558598_UpdatedTerritoriesWithReferencesToBonussesAndUpgrades.Designer.cs">
       <DependentUpon>201502071558598_UpdatedTerritoriesWithReferencesToBonussesAndUpgrades.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201503261042395_AddedNews.cs" />
+    <Compile Include="Migrations\201503261042395_AddedNews.Designer.cs">
+      <DependentUpon>201503261042395_AddedNews.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels\AccountViewModels.cs" />
     <Compile Include="Models\CampaignContext.cs" />
@@ -229,6 +233,7 @@
     <Compile Include="Models\CampaignModels\Territory.cs" />
     <Compile Include="Models\CampaignModels\TerritoryBonus.cs" />
     <Compile Include="Models\CampaignModels\TerritoryUpgrade.cs" />
+    <Compile Include="Models\CampaignModels\News.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1166,6 +1171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201502071558598_UpdatedTerritoriesWithReferencesToBonussesAndUpgrades.resx">
       <DependentUpon>201502071558598_UpdatedTerritoriesWithReferencesToBonussesAndUpgrades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503261042395_AddedNews.resx">
+      <DependentUpon>201503261042395_AddedNews.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
