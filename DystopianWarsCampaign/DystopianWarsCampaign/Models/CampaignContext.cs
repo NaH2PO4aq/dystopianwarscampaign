@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
+
 namespace DystopianWarsCampaign.Models
 {
     public class DystopianCampaignContext : DbContext

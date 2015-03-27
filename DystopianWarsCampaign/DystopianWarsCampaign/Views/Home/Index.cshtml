@@ -1,4 +1,5 @@
-﻿@model IEnumerable<DystopianWarsCampaign.Models.News>
+﻿@model IList<DystopianWarsCampaign.Models.News>
+
 @{
     ViewBag.Title = "Home Page";
 }
@@ -23,16 +24,41 @@ if not hundreds, of lesser skirmishes.</>
       <hr />
   </div></div></div> 
 
-<div class="row">
-    @foreach (var item in Model)
-    {
-        <div class="col-md-4">
-            <div class="jumbotron">
-                <h4>@Html.Raw(item.Title)</h4>
-                <h5><i>@Html.Raw(item.Date)</i></h5>
-                <hr />
-                <h5>@Html.Raw(item.Content)</h5>
-            </div>
-        </div>
+@for (int i = 0; i < Model.Count; i++)
+{
+    if (i == 0 || i % 3 == 0)
+    { 
+        @:<div class="row">  
     }
-</div>
+        <text>
+        <div class="col-md-4">    
+        <div class="jumbotron">
+        <h4>@Html.Raw(Model[i].Title)</h4>
+        <h5><i>@Html.Raw(Model[i].Date)</i></h5>
+        <hr />
+        <h5>@Html.Raw(Model[i].Content)</h5>
+        </div>
+        </div>
+        </text>
+    
+    if (i % 3 == 2 || i == Model.Count - 1)
+    {
+       @:</div>
+    }
+}
+
+@*<div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <div class="jumbotron">
+                    <h4>@Html.Raw(item.Title)</h4>
+                    <h5><i>@Html.Raw(item.Date)</i></h5>
+                    <hr />
+                    <h5>@Html.Raw(item.Content)</h5>
+                </div>
+            </div>
+
+        }
+    </div>*@
+
