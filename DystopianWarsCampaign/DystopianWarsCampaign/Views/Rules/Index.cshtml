@@ -77,7 +77,7 @@
     By default a territory gives +10 RP per turn. A capital territory gives +30 RP per turn. A player starts with one capital territory and two normal territories, thus has 50 RP to spend in his first turn.
 </p>
 <h3 id="TerritoryUpgrades">Territory upgrades</h3>
-All territory upgrades must be represented by appropriate scenery and/or tokens. Place the upgrade as normal in the advanced deployment phase of a battle. If a territory with an upgrade under construction is captured 25% (rounded up) of the initial RP cost is refunded.
+All territory upgrades must be represented by appropriate scenery and/or tokens. Place the upgrade as normal in the advanced deployment phase of a battle. If a territory with an upgrade under construction is captured 25% (rounded up) of the initial RP cost is refunded. Upgrades can also be sold for 25% of the initial RP cost.
 <table class="table table-bordered table-striped table">
     <thead>
         <tr>
@@ -104,7 +104,7 @@ All territory upgrades must be represented by appropriate scenery and/or tokens.
     <tr>
         <td>Harbour</td>
         <td>50</td>
-        <td>When defending you have up to 100 additional points to spend on your army in this territory. Squadrons bought with these points are deployed in the harbour.</td>
+        <td>When defending you have up to 10% (of the base point value) additional points to spend on your army in this territory. Squadrons bought with these points are deployed in the harbour.</td>
     </tr>
     <tr>
         <td>Tower Defensive Line</td>
@@ -119,9 +119,12 @@ All territory upgrades must be represented by appropriate scenery and/or tokens.
         <tr>
         <td>Drydock</td>
         <td>40</td>
-        <td>A drydock is build in your capital and removes the 1 RP cost per squadron when building units and increases the automatically repaired hp per turn to 3.</td>
+        <td>The drydock is build in your capital and removes the 1 RP cost per squadron when constructing new units and increases the automatically repaired HP per turn to 3 HP.</td>
     </tr>
 </table>
+
+<h3 id="UpgradeMaintenance">Upgrade Maintenance</h3>
+Every upgrade needs to have regular maintenance to keep it in working order and to prevent it from crumbling down. This costs 10% of the upgrade build cost per turn. If the maintenance is not done the upgrade is disabled for one turn, if then after one turn the maintenance is still not done the upgrade is destroyed. 
 
 <h3 id="TerritoryBonuses">Territory bonuses</h3>
 Some territories provide inherent bonuses. If appropriate, these should be represented by appropriate scenery and/or tokens. Remember, it's better to have it look cool and make for exciting battles than to provide a teeny edge to one of the players!
@@ -220,13 +223,12 @@ Some territories provide inherent bonuses. If appropriate, these should be repre
     At the beginning of a turn each ship automatically repairs 2 hull points (3 with a drydock). This means that most small vessels may be repaired free of charge. For each additional hull point to be repaired, 1 RP per 2 repaired HP (rounded up) must be spend. Remember that you can chose to not fully repair a unit, however if you use this unit in battle it will be damaged from the start.
 </p>
 <p>
-    <strong>Example:</strong> A 3-strong squadron of Riever cruisers engages in an assault. At the end of the assault one of the Rievers is destroyed, one has taken three damage and one has taken one damage. At the beginning of the repair step 1 RP must be paid to recover the destroyed Riever. It recovers two hull points automatically, leaving two hull points to be repaired. The other Rievers also regenerate two hull points. One Riever (with two hull points of damage) is repaired to full, the other one (with three hull points of damage) has one point of damage left to repair. This costs one additional RP.
+    <strong>Example:</strong> A 3-strong squadron of Riever cruisers engages in an assault. At the end of the assault one of the Rievers is destroyed, one has taken three damage and one has taken one damage.</p>
+<p>
+    In total this cruiser squadron has taken 4 + 3 + 2 = 9 hull points of damage. Of those, 2 + 2 + 2 = 6 hull points were repaired automatically. 3 hull points remaining cost 1.5 RP, rounded up to 2 RP, to repair. Thus the player has to pay 2 RP to restore the Riever squad to full working order.
 </p>
 <p>
-    In total this cruiser squadron has taken 4 + 3 + 2 = 9 hull points of damage. Of those, 2 + 2 + 2 = 6 hull points were repaired automatically. 3 hull points remaining cost 3 RP to repair and 1 additional RP is paid for the destroyed Riever, thus the player has to pay 4 RP to restore the Riever squad to full working order.
-</p>
-<p>
-    Also note that the Home Fleet is allowed repairs between battles if you are attacked multiple times in one turn. This can cause you to have negative RP. This extra repair chance only applies to damage taken in the current turn and you pay 1 RP per 1 HP when doing this, reflecting crews working over time to get the ship fixed. This means that if I choose not to fully repair a unit from my home fleet its maximum HP for that turn is reduced. Also note that the "free" 2 HP repair only applies at the start of the next turn. 
+    Also note that the Home Fleet is allowed repairs between battles if you are attacked multiple times in one turn. This can cause you to have negative RP. This extra repair chance only applies to damage taken in the current turn and you pay <strong>1 RP per 1 HP</strong> when doing this, reflecting crews working over time to get the ship fixed. This means that if I choose not to fully repair a unit from my home fleet its maximum HP for that turn is reduced. Also note that the "free" 2 HP repair only applies at the start of the next turn. 
 </p>
 <p>
     <strong>Example:</strong> A Liberty and Savannah from the Home Fleet are destroyed in a battle. The player chooses to fully repair the Liberty but does not repair the Savannah. This means that the maximum HP of the Savannah is 2 for the whole turn. This player is then attacked 2 times. In the first battle the Liberty takes 5 damage, the player also wants to use the Liberty for the second battle and repairs it to full, paying 5 RP. The Liberty then takes 6 damage. At the end of the turn the Liberty has 3 HP remaining. 
@@ -292,7 +294,7 @@ Some territories provide inherent bonuses. If appropriate, these should be repre
     When a cease-fire agreement is in place, both players have agreed not to attack each other. They may not pass through each others territories nor benefit from territory upgrades the other player controls. Example: if an allied player controls a Radar Array next to an area where you are fighting, you do not gain the reroll for strategic advantage.
 </p>
 <p>
-    Cease-fire agreements may be broken unilaterally at any point in the game. This means that a player can blindside a player he or she has a cease-fire agreement with. If used in a hostile manner though (example: sneak attack), the offending player may not agree to cease-fire agreements for three turns.
+    Cease-fire agreements may be broken unilaterally at any point in the game. This means that a player can blindside a player he or she has a cease-fire agreement with. If used in a hostile manner without warning(example: sneak attack), the offending player must pay a 30 RP penalty. There is no penalty when a cease-fire is canceled and the attack is done the next turn.
 </p>
 <h4>Alliance</h4>
 <p>
@@ -304,6 +306,9 @@ Some territories provide inherent bonuses. If appropriate, these should be repre
 <p>
     An allied player may request RP from the other player to fund repairs, battles or advantages. An allied player may not request RP to aid in upgrading his or her territories.
 </p>
+<p>
+    Allies can also use each other's territories to attack a territory, the largest distance you can cross is one territory. 
+</p>
 <h3>Allied Detachments</h3>
 <p>
     Players may only freely include allied detachments that consist of nations that are not actively participating in the campaign (e.g. the French Republic can take allies from the Ottoman Empire). If a player wishes to include detachments from a nation that is active in this campaign, both players must be part of the same alliance. Furthermore, permission to use the allied detachment must be granted by the allied nation.
@@ -314,6 +319,15 @@ Some territories provide inherent bonuses. If appropriate, these should be repre
 </p>
 <h2 id="Changelog">Changelog</h2>
 <p>
+    29-03-2015: Upgrade maintenance
+    <ul>
+        <li>Added crossing of allied territories</li>
+        <li>Changed harbour bonus to 10%</li>
+        <li>Changed cease-fire sneak attack penalty to 30RP</li>
+        <li>Corrected repair example</li>
+        <li>Added upgrade selling</li>
+        <li>Added upgrade maintenance</li>
+    </ul>
     26-03-2015: More tweaks
     <ul>
         <li>RP cost of mines 20 to 10</li>
