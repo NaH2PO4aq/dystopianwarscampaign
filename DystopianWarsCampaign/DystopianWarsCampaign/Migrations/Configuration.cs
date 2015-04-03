@@ -20,10 +20,10 @@ namespace DystopianWarsCampaign.Migrations
         {
             var News = new News[]
             {
-                new News{Title="Updated campaign site!", Date=DateTime.Today, Content="Throughout the last couple of weeks, we've done some minor updates to our campaign website. Now we've got a new layout, which is far from pretty, and therefore still in beta. More interestingly, the map is fully up to date for round three. In addition, full fleet-lists of each faction have been published"},
-                new News{Title="End of round 3", Date=DateTime.Today, Content="Battles have been hard fought and territories have been either gained or lost. Meanwhile, several armies have increased and upgrades have been built. It's time for round #4! Please submit your moves before the 28th of March!"},
-                new News{Title="Naval Reviews", Date=DateTime.Today, Content=@"<p>The Illustrated Naval Review, read all about it!</p> <p> <img src=""Content/Images/Naval_review_1.jpg"" class=""img-thumbnail"" HEIGHT=""181"" WIDTH=""128""></p>"},
-                new News{Title="Testing second row", Date=DateTime.Today, Content="Battles have been hard fought and territories have been either gained or lost. Meanwhile, several armies have increased and upgrades have been built. It's time for round #4! Please submit your moves before the 28th of March!"}
+                new News{Title="Towards round 5!", Date=new DateTime(2015,04,03), Content=@"Another round has come to an end! The Prussian Empire have finally launched a succesful counteroffensive against the American forces to their north. <p></p> For the full story and other news, check out The Illustrated Naval Review! <p>TODO: IMAGE</p> Please submit your moves before April, 11th"},
+                new News{Title="Updated campaign site!", Date=new DateTime(2015,03,25), Content="Throughout the last couple of weeks, we've done some minor updates to our campaign website. Now we've got a new layout, which is far from pretty, and therefore still in beta. More interestingly, the map is fully up to date for round three. In addition, full fleet-lists of each faction have been published"},
+                new News{Title="End of round 3", Date=new DateTime(2015,03,20), Content="Battles have been hard fought and territories have been either gained or lost. Meanwhile, several armies have increased and upgrades have been built. It's time for round #4! Please submit your moves before the 28th of March!"},
+                new News{Title="Naval Reviews", Date=new DateTime(2015,03,09), Content=@"<p>The Illustrated Naval Review, read all about it!</p> <p> <img src=""Content/Images/Naval_review_1.jpg"" class=""img-thumbnail"" ></p>"},
             };
             context.News.AddOrUpdate(tb => tb.Title, News);
             context.SaveChanges();
@@ -154,7 +154,8 @@ namespace DystopianWarsCampaign.Migrations
                     AwayFleet=@"<table>
                         <thead><tr><th>Name</th><th>Type</th><th>Points</th></tr></thead>
                         <tbody>
-                        <tr><td>1x Euclid (Sky Dreadnought) </td><td> Aer. Massive </td><td class=""sum""> 275 </td></tr>
+                        <tr><td>1x Prometheus (Dreadnought) </td><td> Nav. Massive </td><td class=""sum""> 340      </td></tr>
+                        <tr><td>1x Euclid (Sky Dreadnought) </td><td> Aer. Massive </td><td class=""sum""> 310 </td></tr>
                         <tr><td>1x Diophantus (Assault Carrier) </td><td> Nav. Massive </td><td class=""sum""> 200</td></tr>
                         <tr><td>1x Callimachus-Alpha (Time Orb) </td><td> Arm. Large </td><td class=""sum""> 90   </td></tr>
                         <tr><td>1x Callimachus-Beta (Battle Orb) </td><td> Arm. Large </td><td class=""sum""> 85 </td></tr>
@@ -170,14 +171,15 @@ namespace DystopianWarsCampaign.Migrations
                         <tr><td>4x Diogenes (Frigate) </td><td> Nav. Small </td><td class=""sum""> 100           </td></tr>
                         <tr><td>5x Thales (Corvette) </td><td> Nav. Small </td><td class=""sum""> 100            </td></tr>
                         <tr><td>5x Thales (Corvette) </td><td> Nav. Small </td><td class=""sum""> 100             </td></tr>
-                        <tr><td>1x Galen (Escort) </td><td> Nav. Small </td><td class=""sum""> 25                   </td></tr>
+                        <tr><td>3x Galen (Escort) </td><td> Nav. Small </td><td class=""sum""> 75                   </td></tr>
+                        <tr><td>2x Alea (Small Escort Flyer) </td><td> Aer. Small </td><td class=""sum""> 60        </td></tr>
                          <tr><td>                 </td><td>     TOTAL       </td><td class=""subtotal"" />  </tr>
                         </tbody>
                     </table>",
                     HomeFleet=@"<table>
                         <thead><tr><th>Name</th><th>Type</th><th>Points</th></tr></thead>
                         <tbody>
-                         <tr><td>1x Prometheus (Dreadnought) </td><td> Nav. Massive </td><td class=""sum""> 320      </td></tr>
+                         <tr><td>1x Prometheus (Dreadnought) </td><td> Nav. Massive </td><td class=""sum""> 340      </td></tr>
                          <tr><td>1x Pericles (Fleet Carrier) </td><td> Nav. Massive </td><td class=""sum""> 165    </td></tr>    
                          <tr><td>1x Epicurus (Sky Fortress) </td><td> Aer. Massive </td><td class=""sum""> 180           </td></tr>
                          <tr><td>1x Aristotle (Battleship) </td><td> Nav. Large </td><td class=""sum""> 200     </td></tr>
