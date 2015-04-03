@@ -20,7 +20,7 @@ Licensed under the Creative Commons Attribution 2.5 License - http://creativecom
   LightboxOptions = (function() {
     function LightboxOptions() {
       this.fadeDuration = 500;
-      this.fitImagesInViewport = true;
+      this.fitImagesInViewport = false;
       this.resizeDuration = 700;
       this.showImageNumberLabel = true;
       this.wrapAround = false;
