@@ -10,6 +10,7 @@ namespace DystopianWarsCampaign.Models
 {
     public class News
     {
+        [Key]
         public int ID { get; set; }
 
         public string Title { get; set; }

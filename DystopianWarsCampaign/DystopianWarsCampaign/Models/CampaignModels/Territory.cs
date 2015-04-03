@@ -1,6 +1,7 @@
 ﻿using DystopianWarsCampaign.Models.CampaignModels;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DystopianWarsCampaign.Models
 {
@@ -16,6 +17,8 @@ namespace DystopianWarsCampaign.Models
 
         public virtual Faction Faction { get; set; }
 
+        
+      
         public virtual ICollection<TerritoryBonus> Bonuses { get; set; }
         public virtual ICollection<TerritoryUpgrade> Upgrades { get; set; }
 

@@ -12,36 +12,44 @@ namespace DystopianWarsCampaign.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
 
         protected override void Seed(DystopianWarsCampaign.Models.DystopianCampaignContext context)
         {
+
             var News = new News[]
-            {
+            {   
                 new News{Title="Towards round 5!", Date=new DateTime(2015,04,03), Content=@"Another round has come to an end! The Prussian Empire have finally launched a succesful counteroffensive against the American forces to their north. <p></p> For the full story and other news, check out The Illustrated Naval Review! <p>TODO: IMAGE</p> Please submit your moves before April, 11th"},
                 new News{Title="Updated campaign site!", Date=new DateTime(2015,03,25), Content="Throughout the last couple of weeks, we've done some minor updates to our campaign website. Now we've got a new layout, which is far from pretty, and therefore still in beta. More interestingly, the map is fully up to date for round three. In addition, full fleet-lists of each faction have been published"},
                 new News{Title="End of round 3", Date=new DateTime(2015,03,20), Content="Battles have been hard fought and territories have been either gained or lost. Meanwhile, several armies have increased and upgrades have been built. It's time for round #4! Please submit your moves before the 28th of March!"},
-                new News{Title="Naval Reviews", Date=new DateTime(2015,03,09), Content=@"<p>The Illustrated Naval Review, read all about it!</p> <p> <img src=""Content/Images/Naval_review_1.jpg"" class=""img-thumbnail"" ></p>"},
+                new News{Title="Naval Reviews", Date=new DateTime(2015,03,09), Content=@"The Illustrated Naval Review, read all about it! <p> <img src=""Content/Images/Naval_review_1.jpg"" class=""img-thumbnail"" ></p>"},
             };
+
+            var db = new DystopianCampaignContext();
+            var itemsToDelete = db.News.Where(x => x.Date < DateTime.Now);
+            db.News.RemoveRange(itemsToDelete);
+            db.SaveChanges();
+           
             context.News.AddOrUpdate(tb => tb.Title, News);
             context.SaveChanges();
 
-            var territoryBonuses = new TerritoryBonus[]
-            {
-                new TerritoryBonus{Name="Town", Description="+10 additional requisition per turn."},
-                new TerritoryBonus{Name="Town", Description="+10 additional requisition per turn."},
-                new TerritoryBonus{Name="Oil Rigs", Description="+10 additional requisition per turn."},
-                new TerritoryBonus{Name="Oil Rigs", Description="+10 additional requisition per turn."},
-                new TerritoryBonus{Name="Industrial Complex", Description="+10 additional requisition per turn."},
-                new TerritoryBonus{Name="Inhospitable", Description="Upgrades on this territory cost an additional 50%."},
-                new TerritoryBonus{Name="Inhospitable", Description="Upgrades on this territory cost an additional 50%."},
-                new TerritoryBonus{Name="Monument", Description="Uses standard tower stats without weapons. Provides Die Hard Attitude (Owner's Faction, 16'')."},
-                new TerritoryBonus{Name="Lighthouse", Description="Uses standard tower stats without weapons. May function as an Expert Spotter."}
-            };
-            context.TerritoryBonuses.AddOrUpdate(tb => tb.Name, territoryBonuses);
-            context.SaveChanges();
+            //var territoryBonuses = new TerritoryBonus[]
+            //{
+            //    new TerritoryBonus{Name="Town", Description="+10 additional requisition per turn."},
+            //    new TerritoryBonus{Name="Town", Description="+10 additional requisition per turn."},
+            //    new TerritoryBonus{Name="Oil Rigs", Description="+10 additional requisition per turn."},
+            //    new TerritoryBonus{Name="Oil Rigs", Description="+10 additional requisition per turn."},
+            //    new TerritoryBonus{Name="Industrial Complex", Description="+10 additional requisition per turn."},
+            //    new TerritoryBonus{Name="Inhospitable", Description="Upgrades on this territory cost an additional 50%."},
+            //    new TerritoryBonus{Name="Inhospitable", Description="Upgrades on this territory cost an additional 50%."},
+            //    new TerritoryBonus{Name="Monument", Description="Uses standard tower stats without weapons. Provides Die Hard Attitude (Owner's Faction, 16'')."},
+            //    new TerritoryBonus{Name="Lighthouse", Description="Uses standard tower stats without weapons. May function as an Expert Spotter."}
+            //};
+
+            //context.TerritoryBonuses.AddOrUpdate(tb => tb.Name, territoryBonuses);
+            //context.SaveChanges();
 
             var territoryUpgrades = new TerritoryUpgrade[]
             {
@@ -281,19 +289,19 @@ namespace DystopianWarsCampaign.Migrations
                 new Territory{Name="Territory 29", Faction=factions[5], Description="Description goes here", FlagXCoord=0, FlagYCoord=0},
                 new Territory{Name="Territory 30", Faction=factions[1], Description="Description goes here", FlagXCoord=0, FlagYCoord=0}
             };
-            //Towns
-            territories[14].Bonuses.Add(territoryBonuses[0]);
-            territories[21].Bonuses.Add(territoryBonuses[1]);
-            //Rigs
-            territories[9].Bonuses.Add(territoryBonuses[2]);
-            territories[15].Bonuses.Add(territoryBonuses[3]);
-            //Industrial Complex
-            territories[8].Bonuses.Add(territoryBonuses[4]);
-            //Inhospitable
-            territories[11].Bonuses.Add(territoryBonuses[5]);
-            territories[24].Bonuses.Add(territoryBonuses[6]);
-            //Monuments
-            territories[28].Bonuses.Add(territoryBonuses[7]);
+            ////Towns
+            //territories[14].Bonuses.Add(territoryBonuses[0]);
+            //territories[21].Bonuses.Add(territoryBonuses[1]);
+            ////Rigs
+            //territories[9].Bonuses.Add(territoryBonuses[2]);
+            //territories[15].Bonuses.Add(territoryBonuses[3]);
+            ////Industrial Complex
+            //territories[8].Bonuses.Add(territoryBonuses[4]);
+            ////Inhospitable
+            //territories[11].Bonuses.Add(territoryBonuses[5]);
+            //territories[24].Bonuses.Add(territoryBonuses[6]);
+            ////Monuments
+            //territories[28].Bonuses.Add(territoryBonuses[7]);
 
             context.Territories.AddOrUpdate(t => t.Name, territories);
             context.SaveChanges();
