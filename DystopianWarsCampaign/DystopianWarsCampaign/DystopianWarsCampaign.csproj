@@ -190,6 +190,7 @@
     <Compile Include="Controllers\Admin\TerritoryBonusController.cs" />
     <Compile Include="Controllers\Admin\TerritoryUpgradesController.cs" />
     <Compile Include="Controllers\Admin\UsersController.cs" />
+    <Compile Include="Controllers\NavalReview.cs" />
     <Compile Include="Controllers\FactionsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -226,6 +227,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels\AccountViewModels.cs" />
     <Compile Include="Models\CampaignContext.cs" />
+    <Compile Include="Models\CampaignModels\NavalReview.cs" />
     <Compile Include="Models\CampaignModels\Faction.cs" />
     <Compile Include="Models\AccountModels\IdentityModels.cs" />
     <Compile Include="Models\AccountModels\ManageViewModels.cs" />
@@ -1153,6 +1155,7 @@
     <Content Include="Scripts\version.json" />
     <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\Factions.cshtml" />
+    <Content Include="Views\NavalReview\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

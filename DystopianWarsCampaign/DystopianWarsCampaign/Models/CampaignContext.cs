@@ -21,5 +21,6 @@ namespace DystopianWarsCampaign.Models
         public DbSet<TerritoryBonus> TerritoryBonuses { get; set; }
         public DbSet<TerritoryUpgrade> TerritoryUpgrades { get; set; }
         public DbSet<News> News { get; set; }
+        public DbSet<NavalReview> NavalReview { get; set; }
     }
 }
