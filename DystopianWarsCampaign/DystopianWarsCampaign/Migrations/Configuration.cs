@@ -73,18 +73,19 @@ namespace DystopianWarsCampaign.Migrations
                     AwayFleet=@"<table>
                         <thead><tr><th>Name</th><th>Type</th><th>Points</th></tr></thead>
                         <tbody>
+                        <tr><td>1x Enterprise (Dreadnought) </td><td> Nav. Massive </td><td class=""sum""> 280 </td></tr>
                         <tr><td>1x Savannah (Sky Fortress) </td><td> Aer. Massive </td><td class=""sum""> 165    </td></tr>
                         <tr><td>1x Valley (Airship) </td><td> Aer. Large </td><td class=""sum""> 150           </td></tr>
                         <tr><td>1x Boston (Attack Submarine) </td><td> Nav. Large </td><td class=""sum""> 145    </td></tr>
-                        <tr><td>1x Liberty (Heavy Battleship) </td><td> Nav. Large </td><td class=""sum""> 215 </td></tr>
-                        <tr><td>1x Annapolis (Battle Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 115  </td></tr>                        
-                        <tr><td>1x Annapolis (Battle Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 115  </td></tr>
+                        <tr><td>1x Liberty (Heavy Battleship) </td><td> Nav. Large </td><td class=""sum""> 220 </td></tr>
+                        <tr><td>1x Annapolis (Battle Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 120  </td></tr>                        
+                        <tr><td>1x Annapolis (Battle Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 120  </td></tr>
                         <tr><td>3x Georgetown MkII (Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 210   </td></tr>
-                        <tr><td>3x Lee (Scoutship) </td><td> Aer. Medium </td><td class=""sum""> 240            </td></tr>
-                        <tr><td>3x Princeton (Gunship) </td><td> Nav. Medium </td><td class=""sum""> 270      </td></tr>
+                        <tr><td>3x Lee (Scoutship) </td><td> Aer. Medium </td><td class=""sum""> 255           </td></tr>
+                        <tr><td>3x Princeton (Gunship) </td><td> Nav. Medium </td><td class=""sum""> 255      </td></tr>
                         <tr><td>4x Augusta (Frigate) </td><td> Nav. Small </td><td class=""sum""> 120        </td></tr>
                         <tr><td>5x Avion (Strike Bomber) </td><td> Aer. Small </td><td class=""sum""> 150       </td></tr>
-                        <tr><td>4x Guilford (Destroyer) </td><td> Nav. Small </td><td class=""sum""> 160       </td></tr>
+                        <tr><td>4x Guilford (Destroyer) </td><td> Nav. Small </td><td class=""sum""> 180       </td></tr>
                         <tr><td>5x Revere (Corvette) </td><td> Nav. Small </td><td class=""sum""> 100          </td></tr>
                         <tr><td>                 </td><td>     TOTAL       </td><td class=""subtotal"" />  </tr>
                         </tbody>
@@ -95,19 +96,20 @@ namespace DystopianWarsCampaign.Migrations
                         <tr><td>1x Enterprise (Dreadnought) </td><td> Nav. Massive </td><td class=""sum""> 280 </td></tr>
                         <tr><td>1x Savannah (Sky Fortress) </td><td> Aer. Massive </td><td class=""sum""> 165         </td></tr>
                         <tr><td>1x Valley (Airship) </td><td> Aer. Large </td><td class=""sum""> 150                  </td></tr>
-                        <tr><td>1x Liberty (Heavy Battleship) </td><td> Nav. Large </td><td class=""sum""> 215 </td></tr>
+                        <tr><td>1x Liberty (Heavy Battleship) </td><td> Nav. Large </td><td class=""sum""> 220 </td></tr>
                         <tr><td>1x Boston (Attack Submarine) </td><td> Nav. Large </td><td class=""sum""> 145         </td></tr>
                         <tr><td>1x Independence (Battleship) </td><td> Nav. Large </td><td class=""sum""> 180         </td></tr>
                         <tr><td>3x A17 (Bomber) </td><td> Aer. Medium </td><td class=""sum""> 180                     </td></tr>
-                        <tr><td>1x Annapolis (Battle Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 115       </td></tr>
-                        <tr><td>1x Annapolis (Battle Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 115       </td></tr>
+                        <tr><td>1x Annapolis (Battle Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 120      </td></tr>
+                        <tr><td>1x Annapolis (Battle Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 120      </td></tr>
                         <tr><td>3x Georgetown MkII (Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 210        </td></tr>
                         <tr><td>3x Lexington MkII (Light Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 165   </td></tr>
                         <tr><td>4x Augusta (Frigate) </td><td> Nav. Small </td><td class=""sum""> 120                 </td></tr>
                         <tr><td>4x Augusta (Frigate) </td><td> Nav. Small </td><td class=""sum""> 120                 </td></tr>
                         <tr><td>5x Avion (Strike Bomber) </td><td> Aer. Small </td><td class=""sum""> 150             </td></tr>
-                        <tr><td>3x Guilford (Destroyer) </td><td> Nav. Small </td><td class=""sum""> 120              </td></tr>
-                        <tr><td>3x Springfield (Escort) </td><td> Nav. Small </td><td class=""sum""> 60               </td></tr>
+                        <tr><td>4x Guilford (Destroyer) </td><td> Nav. Small </td><td class=""sum""> 180              </td></tr>
+                        <tr><td>3x Springfield (Escort) </td><td> Nav. Small </td><td class=""sum""> 75              </td></tr>
+                        <tr><td>5x Revere (Corvette) </td><td> Nav. Small </td><td class=""sum""> 100          </td></tr>
                          <tr><td>                 </td><td>     TOTAL       </td><td class=""subtotal"" />  </tr>
                         </tbody>
                     </table>"
@@ -122,35 +124,43 @@ namespace DystopianWarsCampaign.Migrations
                         <tr><td>1x Elbe (Fleet Carrier) </td><td> Nav. Massive </td><td class=""sum""> 210        </td></tr>    
                         <tr><td>1x Imperium (Sky Fortress) </td><td> Aer. Massive </td><td class=""sum""> 145     </td></tr>
                         <tr><td>1x Kaiser Karl (Heavy Battleship) </td><td> Nav. Large </td><td class=""sum""> 220</td></tr>
-                        <tr><td>1x Sturmbringer (Submarine) </td><td> Nav. Large </td><td class=""sum""> 155      </td></tr>
+                        <tr><td>1x Sturmbringer (Submarine) </td><td> Nav. Large </td><td class=""sum""> 165      </td></tr>
                         <tr><td>3x Donnerfaust (Support Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 255</td></tr>
-                        <tr><td>1x Königsberg (Battle Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 110  </td></tr>
+                        <tr><td>1x KÃ¶nigsberg (Battle Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 110  </td></tr>
                         <tr><td>3x Pflicht (Scoutship) </td><td> Aer. Medium </td><td class=""sum""> 240          </td></tr>
-                        <tr><td>3x Riever (Light Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 150       </td></tr>
+                        <tr><td>3x Riever (Light Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 165       </td></tr>
                         <tr><td>3x Uhlan (Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 195              </td></tr>
                         <tr><td>4x Arminius (Frigate) </td><td> Nav. Small </td><td class=""sum""> 120            </td></tr>
-                        <tr><td>5x Saxony (Corvette) </td><td> Nav. Small </td><td class=""sum""> 100             </td></tr>
-                        <tr><td>5x Saxony (Corvette) </td><td> Nav. Small </td><td class=""sum""> 100             </td></tr>
+                        <tr><td>5x Saxony (Corvette) </td><td> Nav. Small </td><td class=""sum""> 125             </td></tr>
+                        <tr><td>5x Saxony (Corvette) </td><td> Nav. Small </td><td class=""sum""> 125             </td></tr>
                          <tr><td>                 </td><td>     TOTAL       </td><td class=""subtotal"" />  </tr>
                         </tbody>
                     </table>",
                     HomeFleet=@"<table>
                         <thead><tr><th>Name</th><th>Type</th><th>Points</th></tr></thead>
                         <tbody>
-                        <tr><td>1x Blücher (Dreadnought) </td><td> Nav. Massive </td><td class=""sum""> 290                           </td></tr>
+                        <tr><td>1x BlÃ¼cher (Dreadnought) </td><td> Nav. Massive </td><td class=""sum""> 290                           </td></tr>
                         <tr><td>1x Imperium (Sky Fortress) </td><td> Aer. Massive </td><td class=""sum""> 145                         </td></tr>
                         <tr><td>1x Kaiser Karl (Heavy Battleship) </td><td> Nav. Large </td><td class=""sum""> 235                    </td></tr>
-                        <tr><td>1x Sturmbringer (Submarine) </td><td> Nav. Large </td><td class=""sum""> 155                          </td></tr>
+                        <tr><td>1x Sturmbringer (Submarine) </td><td> Nav. Large </td><td class=""sum""> 165                          </td></tr>
                         <tr><td>3x Hussar (Gunship) </td><td> Nav. Medium </td><td class=""sum""> 255                                 </td></tr>
                         <tr><td>3x Donnerfaust (Support Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 255                    </td></tr>
                         <tr><td>3x Geier (Bomber) </td><td> Aer. Medium </td><td class=""sum""> 180                                   </td></tr>
-                        <tr><td>1x Königsberg (Battle Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 110                      </td></tr>
+                        <tr><td>1x KÃ¶nigsberg (Battle Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 110                      </td></tr>
                         <tr><td>3x Uhlan (Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 195                                  </td></tr>
-                        <tr><td>3x Wächter (Escort) </td><td> Nav. Small </td><td class=""sum""> 75                                   </td></tr>
-                        <tr><td>5x Saxony (Corvette) </td><td> Nav. Small </td><td class=""sum""> 100                                 </td></tr>
-                        <tr><td>5x Saxony (Corvette) </td><td> Nav. Small </td><td class=""sum""> 100                                 </td></tr>
+                        <tr><td>3x WÃ¤chter (Escort) </td><td> Nav. Small </td><td class=""sum""> 75                                   </td></tr>
+                        <tr><td>5x Saxony (Corvette) </td><td> Nav. Small </td><td class=""sum""> 125                                </td></tr>
+                        <tr><td>5x Saxony (Corvette) </td><td> Nav. Small </td><td class=""sum""> 125                                 </td></tr>
                         <tr><td>4x Speerwurf (Strike Airship) </td><td> Aer. Small </td><td class=""sum""> 100                        </td></tr>
                         <tr><td>2x Arminius (Frigate) </td><td> Nav. Small </td><td class=""sum""> 60                                 </td></tr>
+                         <tr><td>                 </td><td>     TOTAL       </td><td class=""subtotal"" />  </tr>
+                        </tbody>
+                    </table>",
+                    AlliedFleet=@"<table>
+                        <thead><tr><th>Name</th><th>Type</th><th>Points</th></tr></thead>
+                        <tbody>
+                        <tr><td>1x Minerva (Battlecruiser) </td><td> Nav. Medium </td><td class=""sum""> 120                           </td></tr>
+                        <tr><td>4x Cinqueda (Frigate) </td><td> Nav. Small </td><td class=""sum""> 120                         </td></tr>
                          <tr><td>                 </td><td>     TOTAL       </td><td class=""subtotal"" />  </tr>
                         </tbody>
                     </table>"
@@ -221,7 +231,7 @@ namespace DystopianWarsCampaign.Migrations
                         <tr><td> 1x Charlemagne (Dreadnought) </td><td> Nav. Massive </td><td class=""sum""> 330     </td></tr>
                         <tr><td> 1x Couronne (Assault Carrier) </td><td> Nav. Massive </td><td class=""sum""> 175  </td></tr>
                         <tr><td> 1x Saint-Malo (Heavy Battleship) </td><td> Nav. Large </td><td class=""sum""> 235    </td></tr>
-                        <tr><td> 3x Écuyer (Support Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 210                                      </td></tr>
+                        <tr><td> 3x Ã‰cuyer (Support Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 210                                      </td></tr>
                         <tr><td> 1x Cherbourg (Battle Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 120             </td></tr>
                         <tr><td> 1x Cherbourg (Battle Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 120                </td></tr>
                         <tr><td> 1x Cherbourg (Battle Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 120              </td></tr>
@@ -239,7 +249,7 @@ namespace DystopianWarsCampaign.Migrations
                         <tr><td> 1x Vauban (Surface Skimming Dreadnought) </td><td> Nav. Massive </td><td class=""sum""> 320                        </td></tr>
                         <tr><td> 1x Couronne (Assault Carrier) </td><td> Nav. Massive </td><td class=""sum""> 175                       </td></tr>
                         <tr><td> 1x La Rochelle (Heavy Skimming Battleship) </td><td> Nav. Large </td><td class=""sum""> 245     </td></tr>
-                        <tr><td> 3x Écuyer (Support Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 210                                                            </td></tr>
+                        <tr><td> 3x Ã‰cuyer (Support Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 210                                                            </td></tr>
                         <tr><td> 1x Cherbourg (Battle Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 120                          </td></tr>
                         <tr><td> 3x Marseille (Light Cruiser) </td><td> Nav. Medium </td><td class=""sum""> 180                                                           </td></tr>
                         <tr><td> 4x Alma (Reconnaissance Frigate) </td><td> Nav. Small </td><td class=""sum""> 120                                                        </td></tr>
