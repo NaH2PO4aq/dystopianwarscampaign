@@ -263,6 +263,8 @@
     <Content Include="Content\Images\background.jpg" />
     <Content Include="Content\Images\map3.jpg" />
     <Content Include="Content\Images\Naval_review_1.jpg" />
+    <Content Include="Content\Images\Naval_review_2.jpg" />
+    <Content Include="Content\Images\Naval_review_3.jpg" />
     <Content Include="Content\Images\Naval_review_4.jpg" />
     <Content Include="Content\lightbox.css" />
     <Content Include="favicon.ico" />
