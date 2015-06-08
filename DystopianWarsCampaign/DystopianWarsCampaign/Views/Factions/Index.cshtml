@@ -28,6 +28,9 @@
         <th>
             @Html.DisplayNameFor(model => model.AwayFleet)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AlliedFleet)
+        </th>
     </tr>
 
 
@@ -47,6 +50,9 @@
             <td>
                 @*@Html.Raw(item.AwayFleet)*@
             </td>
+            <td>
+                @*@Html.Raw(item.AlliedFleet)*@
+            </td>
         </tr>
     }
 </table>
@@ -63,6 +69,9 @@
         <th>
             @Html.DisplayNameFor(model => model.AwayFleet)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AlliedFleet)
+        </th>
     </tr>
 
     @foreach (var item in Model)
@@ -77,6 +86,9 @@
             </td>
             <td>
                 @Html.Raw(item.AwayFleet)
+            </td>
+            <td>
+                @Html.Raw(item.AlliedFleet)
             </td>
         </tr>
     }
